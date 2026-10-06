@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#E8DAB2">
+  <meta name="description" content="Daniel Clementrich Houston — cybersecurity student in Singapore, building projects in network defence, cryptography and cloud monitoring.">
+  <meta property="og:title" content="Daniel Clementrich Houston | Cybersecurity Portfolio">
+  <meta property="og:description" content="Python, cryptography and Microsoft Azure projects demonstrating practical cybersecurity skills.">
+  <meta property="og:type" content="website">
+
+  <title>Daniel Clementrich Houston | Cybersecurity Portfolio</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23A45A3D'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='serif' font-size='44' fill='%23E8DAB2'%3Ed%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/manrope-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .languages .language-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      list-style: none;
+      margin: 14px 0 0;
+      padding: 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .languages .language-list li,
+    .languages .language-list strong,
+    .languages .language-list span {
+      font-size: inherit;
+    }
+
+    .languages .language-list strong {
+      font-weight: 800;
+      color: var(--ink, #6B4226);
+    }
+
+    .skills > .toolkit-heading {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+    }
+
+    .toolkit-heading::before,
+    .toolkit-heading::after {
+      content: "";
+      flex: 1;
+      min-width: 16px;
+      height: 1px;
+      background: var(--line, #C4B6A6);
+    }
+
+    .toolkit-heading > span {
+      min-width: 0;
+    }
+
+    .project-screenshot {
+      grid-column: 2 / -1;
+      min-width: 0;
+      margin: 12px 0 0;
+    }
+
+    .project-screenshot > a {
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+    }
+
+    .project-screenshot img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid var(--line, #C4B6A6);
+      border-radius: 4px;
+    }
+
+    .project-screenshot figcaption {
+      max-width: 70ch;
+      margin-top: 12px;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 760px) {
+      .project-screenshot {
+        grid-column: 1 / -1;
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header wrap">
+    <a class="wordmark" href="#top" aria-label="Daniel, back to top">
+      Daniel
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#work">Projects</a>
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a class="nav-contact" href="#contact">Let’s talk</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="eyebrow hero-eyebrow">
+        Cybersecurity student
+        <span>Singapore</span>
+      </div>
+
+      <h1 id="hero-title">
+        Daniel Clementrich<br>
+        <span>Houston.</span>
+      </h1>
+
+      <div class="hero-bottom">
+        <div class="hero-intro">
+          <p class="lead">
+            Practical cybersecurity skills.<br>
+            Demonstrated through working projects.
+          </p>
+
+          <p>
+            I build Python applications for packet filtering, message encryption
+            and cloud monitoring. My projects demonstrate practical skills in
+            networking, cryptography, databases and Microsoft Azure. I’m pursuing
+            a Bachelor’s degree in Cybersecurity at Coventry University through
+            PSB Academy in Singapore, with a career focus on SOC analysis and
+            a long-term goal of specialising in cloud security.
+          </p>
+
+          <div class="actions">
+            <a class="button primary" href="mailto:danielclementrich09@gmail.com">
+              Email me
+            </a>
+
+            <a
+              class="button"
+              href="https://github.com/Melloww-png"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              class="button"
+              href="https://www.linkedin.com/in/daniel-clementrich-houston-0782463b3/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <aside class="currently" aria-label="Current focus">
+          <span class="eyebrow">Current focus</span>
+          <p>TryHackMe SAL1</p>
+          <span class="status">Exam preparation in progress</span>
+
+          <div class="current-note">
+            Applying Python and security analysis in practical labs while
+            preparing for a SOC analyst role.
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero-foot">
+        <span>Python · Networks · Cloud</span>
+        <a href="#work">Explore my work</a>
+        <span>Portfolio / 2026</span>
+      </div>
+    </section>
+
+    <section class="section wrap" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">01 / Selected work</span>
+          <h2 id="work-title">
+            Cybersecurity concepts.<br>
+            Working projects.
+          </h2>
+        </div>
+
+        <p>
+          Projects demonstrating packet filtering, message protection and cloud
+          monitoring, with Python at the centre of each implementation.
+        </p>
+      </div>
+
+      <article class="project">
+        <div class="project-meta">
+          <span class="project-number">01</span>
+          <span>Independent project / 2026</span>
+        </div>
+
+        <div class="project-body">
+          <h3>Firewall Simulator</h3>
+
+          <p>
+            I built a Python firewall simulator to explore how filtering rules
+            control network traffic. It evaluates simulated packets against
+            configured rules and records whether traffic is allowed or blocked.
+            The project models firewall decisions without filtering live
+            network traffic.
+          </p>
+
+          <ul class="tags" aria-label="Technologies">
+            <li>Python</li>
+            <li>SQLite</li>
+            <li>IPv4 validation</li>
+            <li>Packet filtering</li>
+          </ul>
+
+          <details open>
+            <summary>What I implemented</summary>
+
+            <div class="detail-content">
+              <ul>
+                <li>
+                  <strong>Rule-based filtering:</strong>
+                  checks packet information against rules containing a source
+                  IP address, port, protocol, action and priority.
+                </li>
+
+                <li>
+                  <strong>Rule priority:</strong>
+                  uses the configured priority when evaluating filtering rules,
+                  making rule order part of the decision process.
+                </li>
+
+                <li>
+                  <strong>Input validation:</strong>
+                  validates IPv4 addresses to identify malformed input.
+                </li>
+
+                <li>
+                  <strong>Traffic logging:</strong>
+                  stores allowed and blocked packet events in SQLite so decisions
+                  can be reviewed after a simulation.
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>Testing and security relevance</summary>
+
+            <div class="detail-content">
+              <ul>
+                <li>
+                  <strong>Testing:</strong>
+                  exercised the filtering logic with valid, invalid and
+                  unauthorised traffic scenarios.
+                </li>
+
+                <li>
+                  <strong>Security concepts:</strong>
+                  applied access-control rules, input validation and event
+                  logging in one project.
+                </li>
+
+                <li>
+                  <strong>Connection to SOC work:</strong>
+                  filtering decisions and packet logs provide a practical
+                  foundation for understanding network activity and reviewing
+                  blocked traffic.
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="project-proof">
+          <span class="eyebrow">Decision flow</span>
+
+          <div class="decision">
+            Packet<br>
+            <span>↓</span><br>
+            Rule check<br>
+            <span>↓</span><br>
+            Allow / Block
+          </div>
+
+          <span class="proof-note">
+            Simulated traffic · Decisions recorded in SQLite
+          </span>
+        </div>
+      
+        <figure class="project-screenshot">
+          <a href="Pictures%20for%20the%20website/Firewall%20Simulator.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Firewall Simulator">
+            <img
+              src="Pictures%20for%20the%20website/Firewall%20Simulator.png"
+              alt="Firewall Simulator output showing invalid protocol validation and a TCP packet blocked by the port 23 rule."
+              width="655"
+              height="517"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
+          <figcaption>Firewall Simulator: input validation and a packet blocked by rule 2 on port 23. Select the image to view it full size.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <span class="project-number">02</span>
+          <span>Cryptography / 2026</span>
+        </div>
+
+        <div class="project-body">
+          <h3>
+            Secure Mail<br>
+            Cryptography System
+          </h3>
+
+          <p>
+            I developed a Python project to protect message contents and verify
+            their authenticity. It combines encryption, integrity checks and
+            digital signatures to address three separate questions: who can read
+            a message, whether it has changed, and whether its signature is valid.
+          </p>
+
+          <ul class="tags" aria-label="Technologies">
+            <li>Python</li>
+            <li>AES-256-CBC</li>
+            <li>RSA-2048</li>
+            <li>SHA-256</li>
+            <li>HMAC</li>
+            <li>RSA-PSS</li>
+          </ul>
+
+          <details open>
+            <summary>What I implemented</summary>
+
+            <div class="detail-content">
+              <ul>
+                <li>
+                  <strong>Message encryption:</strong>
+                  uses AES-256-CBC to encrypt message contents and supports
+                  decryption with the corresponding key.
+                </li>
+
+                <li>
+                  <strong>Key exchange:</strong>
+                  uses RSA-2048 to protect the exchange of the symmetric
+                  encryption key.
+                </li>
+
+                <li>
+                  <strong>Integrity verification:</strong>
+                  uses SHA-256 and HMAC to check message integrity and detect
+                  unauthorised modifications.
+                </li>
+
+                <li>
+                  <strong>Digital signatures:</strong>
+                  uses RSA-PSS to sign messages and verify signatures using
+                  the corresponding public key.
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>Testing and security relevance</summary>
+
+            <div class="detail-content">
+              <ul>
+                <li>
+                  <strong>Testing:</strong>
+                  tested encryption, decryption, integrity verification and
+                  tampered-message scenarios.
+                </li>
+
+                <li>
+                  <strong>Security concepts:</strong>
+                  combined confidentiality, integrity and authentication,
+                  with a separate mechanism for each purpose.
+                </li>
+
+                <li>
+                  <strong>Connection to cloud security:</strong>
+                  the project provides a foundation for understanding encryption,
+                  key handling and trust in services that exchange sensitive data.
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="project-proof">
+          <span class="eyebrow">Message protection</span>
+
+          <div class="crypto-line">
+            <strong>256<span>bit</span></strong>
+            <span>AES message encryption</span>
+          </div>
+
+          <div class="proof-divider"></div>
+
+          <div class="crypto-line">
+            <strong>2048<span>bit</span></strong>
+            <span>RSA key exchange</span>
+          </div>
+
+          <span class="proof-note">
+            Integrity checks with HMAC · Signatures with RSA-PSS
+          </span>
+        </div>
+      
+        <figure class="project-screenshot">
+          <a href="Pictures%20for%20the%20website/Cryptography%20.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Secure Mail">
+            <img
+              src="Pictures%20for%20the%20website/Cryptography%20.png"
+              alt="Secure Mail command windows showing a message sent, decrypted, and verified for integrity and sender signature."
+              width="953"
+              height="1006"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
+          <figcaption>Secure Mail: message delivery, decryption, integrity checks and sender signature verification. Select the image to view it full size.</figcaption>
+        </figure>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <span class="project-number">03</span>
+          <span>Cloud &amp; IoT / 2026</span>
+        </div>
+
+        <div class="project-body">
+          <h3>
+            Smart Public Bin<br>
+            Monitoring System
+          </h3>
+
+          <p>
+            I built a monitoring prototype to show how fill-level data could help
+            identify public bins that need collection. Python simulates ultrasonic
+            sensor readings for four bins, Azure services process and store the
+            data, and a Flask dashboard presents bin status, alerts and
+            historical readings.
+          </p>
+
+          <ul class="tags" aria-label="Technologies">
+            <li>Python</li>
+            <li>Azure IoT Hub</li>
+            <li>Stream Analytics</li>
+            <li>Cosmos DB</li>
+            <li>Flask</li>
+          </ul>
+
+          <details open>
+            <summary>What I implemented</summary>
+
+            <div class="detail-content">
+              <ul>
+                <li>
+                  <strong>Sensor simulation:</strong>
+                  models ultrasonic sensor behaviour to generate changing
+                  waste-level readings for four bins without physical
+                  sensor hardware.
+                </li>
+
+                <li>
+                  <strong>Cloud data flow:</strong>
+                  sends readings through Azure IoT Hub and Stream Analytics
+                  before storing them in Azure Cosmos DB.
+                </li>
+
+                <li>
+                  <strong>Status detection:</strong>
+                  identifies nearly-full and full bins, with collection alerts
+                  for full bins.
+                </li>
+
+                <li>
+                  <strong>Monitoring dashboard:</strong>
+                  uses Flask to display fill levels, individual bin status,
+                  alerts and previous readings.
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>Scenario handling and practical relevance</summary>
+
+            <div class="detail-content">
+              <ul>
+                <li>
+                  <strong>Waste scenarios:</strong>
+                  supports random, low, high and full waste levels to exercise
+                  different monitoring conditions.
+                </li>
+
+                <li>
+                  <strong>Operational purpose:</strong>
+                  brings the status of multiple bins into one view so a person
+                  can identify which bins need attention.
+                </li>
+
+                <li>
+                  <strong>Connection to cloud security:</strong>
+                  provides experience tracing data across connected devices,
+                  cloud processing, storage and a web application.
+                </li>
+
+                <li>
+                  <strong>Project scope:</strong>
+                  a prototype using simulated readings; it does not represent
+                  a live deployment of public bins.
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="project-proof">
+          <span class="eyebrow">Project scope</span>
+          <strong class="big-number">04</strong>
+          <span class="proof-label">simulated public bins</span>
+
+          <div class="proof-divider"></div>
+
+          <span class="proof-note">
+            Python simulation → IoT Hub → Stream Analytics → Cosmos DB<br>
+            Flask dashboard for monitoring
+          </span>
+        </div>
+      
+        <figure class="project-screenshot">
+          <a href="Pictures%20for%20the%20website/IoT%20Azure%20picture.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Smart Bin Monitoring">
+            <img
+              src="Pictures%20for%20the%20website/IoT%20Azure%20picture.png"
+              alt="Azure Cosmos DB Data Explorer showing a stored reading for BIN001 at 100 percent fill, with a collection alert."
+              width="752"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
+          <figcaption>Smart Bin Monitoring: a full-bin reading stored in Azure Cosmos DB with a collection alert. Select the image to view it full size.</figcaption>
+        </figure>
+      </article>
+
+      <div class="work-footer">
+        <p>More code and experiments on my GitHub.</p>
+
+        <a
+          class="text-link"
+          href="https://github.com/Melloww-png"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit @Melloww-png
+        </a>
+      </div>
+    </section>
+
+    <section class="section wrap" id="about" aria-labelledby="about-title">
+      <div class="about-layout">
+        <div>
+          <span class="eyebrow">02 / A little about me</span>
+
+          <h2 id="about-title">
+            Curious about systems.<br>
+            Careful with the details.
+          </h2>
+
+          <p class="about-copy">
+            I’m a cybersecurity student based in Singapore with project experience
+            in Python development, rule-based packet filtering, cryptography and
+            cloud monitoring. I work with SQL, SQLite and Azure services to store,
+            process and review application data.
+          </p>
+
+          <p class="about-copy">
+            My career focus is security operations, particularly threat detection
+            and incident investigation. I bring an analytical approach, attention
+            to detail and clear written communication to my work. I’m currently
+            preparing for TryHackMe SAL1 through the SOC Level 1 study path.
+          </p>
+
+          <div class="languages">
+            <span class="eyebrow">Languages</span>
+
+            <ul class="language-list">
+              <li><strong>Indonesian</strong> <span>Native</span></li>
+              <li><strong>English</strong> <span>Fluent</span></li>
+              <li><strong>Chinese</strong> <span>Conversational</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="skills">
+          <h3 class="toolkit-heading"><span>My working toolkit</span></h3>
+
+          <div class="skill-row">
+            <h4>Programming &amp; data</h4>
+            <p>Python, Java, SQL, SQLite</p>
+          </div>
+
+          <div class="skill-row">
+            <h4>Security &amp; systems</h4>
+            <p>
+              Linux, Wireshark, Burp Suite, Nmap, cryptography, firewall rules
+            </p>
+          </div>
+
+          <div class="skill-row">
+            <h4>Cloud &amp; development</h4>
+            <p>Microsoft Azure, Flask, Git, GitHub</p>
+          </div>
+
+          <div class="skill-row">
+            <h4>How I work</h4>
+            <p>
+              Problem-solving, analytical thinking, attention to detail,
+              adaptability, initiative and written communication
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="journey" aria-labelledby="journey-title">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">03 / My journey</span>
+
+          <h2 id="journey-title">
+            Education, experience<br>
+            and leadership.
+          </h2>
+        </div>
+      </div>
+
+      <div class="journey-layout">
+        <div>
+          <h3 class="column-heading">Education &amp; training</h3>
+
+          <ol class="timeline">
+            <li>
+              <span class="eyebrow">
+                Jan 2026 – Mar 2027 · Expected
+              </span>
+
+              <h4>Bachelor of Cybersecurity</h4>
+              <p>Coventry University, PSB Academy · Singapore</p>
+
+              <p class="small">
+                Secure programming, cryptography and computer forensics.
+              </p>
+            </li>
+
+            <li>
+              <span class="eyebrow">Apr 2025 – Dec 2025</span>
+              <h4>Diploma in Cybersecurity</h4>
+              <p>PSB Academy · Singapore</p>
+
+              <p class="small">
+                Network defence and computer systems.
+              </p>
+            </li>
+
+            <li>
+              <span class="eyebrow">Sep 2024 – Mar 2025</span>
+
+              <h4>
+                Certificate in Engineering<br>
+                and Information Technology
+              </h4>
+
+              <p>PSB Academy · Singapore</p>
+            </li>
+
+            <li>
+              <span class="eyebrow">Currently studying</span>
+              <h4>TryHackMe SAL1</h4>
+              <p>Exam preparation · SOC Level 1 study path</p>
+            </li>
+          </ol>
+        </div>
+
+        <div>
+          <h3 class="column-heading">Experience &amp; leadership</h3>
+
+          <ol class="timeline">
+            <li>
+              <span class="eyebrow">
+                2023 – 2024 · Jakarta, Indonesia
+              </span>
+
+              <h4>KungFu Live Seafood</h4>
+
+              <p>
+                Managed financial and inventory data in Excel, supported
+                product expansion, and negotiated supplier contracts.
+              </p>
+
+              <p class="small">
+                Built experience in organising data, solving day-to-day
+                problems and communicating with suppliers.
+              </p>
+            </li>
+
+            <li>
+              <span class="eyebrow">
+                Aug 2023 – Apr 2024 · Jakarta, Indonesia
+              </span>
+
+              <h4>Student Council Leader</h4>
+
+              <p>
+                Organised school events and field trips, managed event budgets,
+                and supported initiatives to address bullying.
+              </p>
+
+              <p class="small">
+                Coordinated people, planned activities and followed through
+                on responsibilities.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="contact section wrap"
+      id="contact"
+      aria-labelledby="contact-title"
+    >
+      <span class="eyebrow">04 / Get in touch</span>
+
+      <h2 id="contact-title">
+        Let’s start<br>
+        a conversation<span>.</span>
+      </h2>
+
+      <div class="contact-bottom">
+        <p>
+          Interested in my projects or want to discuss a future cybersecurity
+          opportunity? Get in touch by email or connect with me on LinkedIn.
+        </p>
+
+        <div class="actions">
+          <a class="button primary" href="mailto:danielclementrich09@gmail.com">
+            Email me
+          </a>
+
+          <a
+            class="button"
+            href="https://github.com/Melloww-png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            class="button"
+            href="https://www.linkedin.com/in/daniel-clementrich-houston-0782463b3/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <a class="email-address" href="mailto:danielclementrich09@gmail.com">
+        danielclementrich09@gmail.com
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span>© 2026 Daniel Clementrich Houston</span>
+    <span>Made with curiosity. Based in Singapore.</span>
+    <a href="#top">Back to top</a>
+  </footer>
+</body>
+</html>
