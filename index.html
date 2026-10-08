@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#E8DAB2">
-  <meta name="description" content="Daniel Clementrich Houston — cybersecurity student in Singapore, building projects in network defence, cryptography and cloud monitoring.">
+  <meta name="description" content="Daniel Clementrich Houston — practical cybersecurity skills, analytical problem-solving and a career focus on SOC analysis and cloud security.">
   <meta property="og:title" content="Daniel Clementrich Houston | Cybersecurity Portfolio">
   <meta property="og:description" content="Python, cryptography and Microsoft Azure projects demonstrating practical cybersecurity skills.">
   <meta property="og:type" content="website">
@@ -113,7 +113,7 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="eyebrow hero-eyebrow">
-        Cybersecurity student
+        Aspiring SOC analyst
         <span>Singapore</span>
       </div>
 
@@ -130,12 +130,9 @@
           </p>
 
           <p>
-            I build Python applications for packet filtering, message encryption
-            and cloud monitoring. My projects demonstrate practical skills in
-            networking, cryptography, databases and Microsoft Azure. I’m pursuing
-            a Bachelor’s degree in Cybersecurity at Coventry University through
-            PSB Academy in Singapore, with a career focus on SOC analysis and
-            a long-term goal of specialising in cloud security.
+            Analytical and detail-oriented, I bring practical cybersecurity
+            skills, clear communication and a methodical approach to solving
+            problems, with a career focus on SOC analysis and cloud security.
           </p>
 
           <div class="actions">
@@ -296,7 +293,7 @@
             Simulated traffic · Decisions recorded in SQLite
           </span>
         </div>
-      
+
         <figure class="project-screenshot">
           <a href="Pictures%20for%20the%20website/Firewall%20Simulator.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Firewall Simulator">
             <img
@@ -418,7 +415,7 @@
             Integrity checks with HMAC · Signatures with RSA-PSS
           </span>
         </div>
-      
+
         <figure class="project-screenshot">
           <a href="Pictures%20for%20the%20website/Cryptography%20.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Secure Mail">
             <img
@@ -540,7 +537,7 @@
             Flask dashboard for monitoring
           </span>
         </div>
-      
+
         <figure class="project-screenshot">
           <a href="Pictures%20for%20the%20website/IoT%20Azure%20picture.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Smart Bin Monitoring">
             <img
@@ -554,6 +551,125 @@
           </a>
           <figcaption>Smart Bin Monitoring: a full-bin reading stored in Azure Cosmos DB with a collection alert. Select the image to view it full size.</figcaption>
         </figure>
+      </article>
+
+      <article class="project" id="owasp-juice-shop">
+        <div class="project-meta">
+          <span class="project-number">04</span>
+          <span>Web application security / 2026</span>
+        </div>
+
+        <div class="project-body">
+          <h3>
+            OWASP Juice Shop<br>
+            Security Assessment
+          </h3>
+
+          <p>
+            I assessed OWASP Juice Shop, an intentionally vulnerable web
+            application, in a controlled local lab using Kali Linux. I used
+            Burp Suite and browser developer tools to examine requests,
+            demonstrate security weaknesses and document their impact,
+            with recommendations for addressing each finding.
+          </p>
+
+          <ul class="tags" aria-label="Tools and techniques">
+            <li>Burp Suite</li>
+            <li>Browser developer tools</li>
+            <li>Kali Linux</li>
+            <li>Web application testing</li>
+          </ul>
+
+          <details open>
+            <summary>What I assessed</summary>
+
+            <div class="detail-content">
+              <ul>
+                <li>
+                  <strong>SQL injection and data exposure:</strong>
+                  tested the product-search endpoint and demonstrated how
+                  manipulated input could expose user email addresses and
+                  password hashes from the lab database.
+                </li>
+
+                <li>
+                  <strong>Cross-site scripting (XSS):</strong>
+                  tested search input to demonstrate script execution when
+                  user-controlled content was handled insecurely.
+                </li>
+
+                <li>
+                  <strong>Server-side input validation:</strong>
+                  intercepted a feedback request in Burp Suite and changed its
+                  rating to zero, showing that the server accepted a value
+                  outside the options provided by the interface.
+                </li>
+
+                <li>
+                  <strong>CAPTCHA bypass:</strong>
+                  used Burp Proxy, Repeater and Intruder to examine and replay
+                  feedback requests, demonstrating that CAPTCHA values could
+                  be reused for repeated submissions.
+                </li>
+
+                <li>
+                  <strong>Predictable passwords:</strong>
+                  used challenge clues and publicly available information to
+                  identify a predictable password, demonstrating why password
+                  length alone does not ensure strong authentication.
+                </li>
+
+                <li>
+                  <strong>Chatbot prompt manipulation:</strong>
+                  repeated requests to the support chatbot until it disclosed
+                  a coupon code, highlighting weaknesses in how it enforced
+                  restrictions across repeated interactions.
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>Evidence, recommendations and security relevance</summary>
+
+            <div class="detail-content">
+              <ul>
+                <li>
+                  <strong>Assessment report:</strong>
+                  documented the test methods, observed behaviour, security
+                  impact and supporting screenshots for each finding.
+                </li>
+
+                <li>
+                  <strong>Recommended mitigations:</strong>
+                  proposed parameterised queries, safe output encoding,
+                  server-side validation, single-use CAPTCHA verification,
+                  request limits and stronger authentication controls.
+                </li>
+
+                <li>
+                  <strong>Connection to security operations:</strong>
+                  practised analysing HTTP requests, recognising malicious
+                  input and communicating findings with clear evidence and
+                  actionable remediation advice.
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="project-proof">
+          <span class="eyebrow">Assessment scope</span>
+          <strong class="big-number">06</strong>
+          <span class="proof-label">documented security findings</span>
+
+          <div class="proof-divider"></div>
+
+          <span class="proof-note">
+            Controlled local lab<br>
+            Request analysis · Evidence · Recommended fixes
+          </span>
+        </div>
       </article>
 
       <div class="work-footer">
@@ -581,8 +697,8 @@
           </h2>
 
           <p class="about-copy">
-            I’m a cybersecurity student based in Singapore with project experience
-            in Python development, rule-based packet filtering, cryptography and
+            I’m based in Singapore with project experience in Python development,
+            rule-based packet filtering, cryptography and
             cloud monitoring. I work with SQL, SQLite and Azure services to store,
             process and review application data.
           </p>
