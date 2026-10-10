@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#E8DAB2">
-  <meta name="description" content="Daniel Clementrich Houston — practical cybersecurity skills, analytical problem-solving and a career focus on SOC analysis and cloud security.">
+  <meta name="description" content="Daniel Clementrich Houston — aspiring SOC analyst building Python projects in simulated security monitoring, login detection, cryptography and cloud monitoring.">
   <meta property="og:title" content="Daniel Clementrich Houston | Cybersecurity Portfolio">
-  <meta property="og:description" content="Python, cryptography and Microsoft Azure projects demonstrating practical cybersecurity skills.">
+  <meta property="og:description" content="Python security projects: a tested SOC/SIEM simulator, firewall simulator, cryptography system, cloud monitoring and web security assessment.">
   <meta property="og:type" content="website">
 
   <title>Daniel Clementrich Houston | Cybersecurity Portfolio</title>
@@ -190,14 +190,160 @@
         </div>
 
         <p>
-          Projects demonstrating packet filtering, message protection and cloud
-          monitoring, with Python at the centre of each implementation.
+          Projects covering simulated security monitoring, login detection, packet
+          filtering, message protection, cloud monitoring and web security testing.
         </p>
       </div>
 
-      <article class="project">
+      <article class="project" id="soc-siem-simulator">
         <div class="project-meta">
           <span class="project-number">01</span>
+          <span>Independent project / 2026</span>
+        </div>
+
+        <div class="project-body">
+          <h3>SOC/SIEM Dashboard Simulator</h3>
+
+          <p>
+            I built a local Python dashboard to generate fictional login events,
+            store them in SQLite and flag repeated failed logins. Each alert links
+            to its supporting events and timeline so I can review why the rule
+            matched. All data is simulated; the application does not collect
+            live security logs.
+          </p>
+
+          <ul class="tags" aria-label="Technologies and techniques">
+            <li>Python</li>
+            <li>Flask</li>
+            <li>SQLite</li>
+            <li>Login detection</li>
+            <li>Automated testing</li>
+          </ul>
+
+          <p>
+            <a
+              class="text-link"
+              href="https://github.com/Melloww-png/soc-siem-simulator"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View SOC/SIEM simulator source on GitHub
+            </a>
+          </p>
+
+          <details open>
+            <summary>What I implemented</summary>
+
+            <div class="detail-content">
+              <ul>
+                <li>
+                  <strong>Event generation and storage:</strong>
+                  creates successful login events or a batch of five failures
+                  for a dedicated fictional account. SQLite stores the timestamp,
+                  account, host, source IP and outcome for each event.
+                </li>
+
+                <li>
+                  <strong>Rolling-window detection:</strong>
+                  alerts on at least five failed logins within 300 seconds for
+                  the same account, host and source IP. The exact time boundaries
+                  are included; successful logins do not count or reset the window.
+                </li>
+
+                <li>
+                  <strong>Alert evidence:</strong>
+                  shows five qualifying failures in a timeline and suppresses
+                  additional matching alerts for five minutes after an alert.
+                </li>
+
+                <li>
+                  <strong>Bounded storage:</strong>
+                  retains at most 1,000 events and 100 alerts. An alert is removed
+                  when its supporting evidence expires.
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>Testing and connection to SOC analysis</summary>
+
+            <div class="detail-content">
+              <ul>
+                <li>
+                  <strong>Verified tests:</strong>
+                  passed 11 automated tests on Windows covering normal logins,
+                  the four/five-failure threshold, matching fields, 300-second
+                  and 301-second boundaries, alert suppression, evidence,
+                  persistence and retention limits.
+                </li>
+
+                <li>
+                  <strong>Evidence review:</strong>
+                  practised reading account, host, IP and timestamp information
+                  to understand why a detection matched.
+                </li>
+
+                <li>
+                  <strong>Investigation judgement:</strong>
+                  tested a scenario where legitimate password mistakes trigger
+                  the rule. An alert identifies activity to investigate; it does
+                  not automatically prove an attack.
+                </li>
+
+                <li>
+                  <strong>Current limits:</strong>
+                  one detection rule using generated events in event-time order.
+                  Review status, investigation notes, additional rules and
+                  Windows/Linux scenarios remain planned. Test results validate
+                  these simulated cases, not real-world detection accuracy.
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="project-proof">
+          <span class="eyebrow">Verified result</span>
+          <strong class="big-number">11</strong>
+          <span class="proof-label">automated tests passed on Windows</span>
+
+          <div class="proof-divider"></div>
+
+          <span class="proof-note">
+            Simulated data<br>
+            Event review · Login detection · Supporting evidence
+          </span>
+        </div>
+
+        <figure class="project-screenshot">
+          <a
+            href="Pictures%20for%20the%20website/soc-siem-dashboard.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open full-size screenshot: SOC/SIEM simulator with simulated login events"
+          >
+            <img
+              src="Pictures%20for%20the%20website/soc-siem-dashboard.png"
+              alt="SOC/SIEM simulator showing two repeated-failed-login alerts and fictional successful and failed logins for demo.account on LAB-PC-01 from 192.0.2.25."
+              width="1895"
+              height="868"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
+
+          <figcaption>
+            <strong>Simulated data:</strong> working dashboard with generated
+            login events and repeated-failed-login alerts. Select the image
+            to view it full size.
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <span class="project-number">02</span>
           <span>Independent project / 2026</span>
         </div>
 
@@ -320,7 +466,7 @@
 
       <article class="project">
         <div class="project-meta">
-          <span class="project-number">02</span>
+          <span class="project-number">03</span>
           <span>Cryptography / 2026</span>
         </div>
 
@@ -451,7 +597,7 @@
 
       <article class="project">
         <div class="project-meta">
-          <span class="project-number">03</span>
+          <span class="project-number">04</span>
           <span>Cloud &amp; IoT / 2026</span>
         </div>
 
@@ -582,7 +728,7 @@
 
       <article class="project" id="owasp-juice-shop">
         <div class="project-meta">
-          <span class="project-number">04</span>
+          <span class="project-number">05</span>
           <span>Web application security / 2026</span>
         </div>
 
@@ -748,7 +894,8 @@
 
           <p class="about-copy">
             I’m based in Singapore with project experience in Python development,
-            rule-based packet filtering, cryptography and cloud monitoring.
+            simulated login monitoring, rule-based packet filtering, cryptography
+            and cloud monitoring.
             I work with SQL, SQLite and Azure services to store,
             process and review application data.
           </p>
@@ -784,7 +931,8 @@
           <div class="skill-row">
             <h4>Security &amp; systems</h4>
             <p>
-              Linux, Wireshark, Burp Suite, Nmap, cryptography, firewall rules
+              Linux, Wireshark, Burp Suite, Nmap, cryptography, firewall rules,
+              simulated event correlation
             </p>
           </div>
 
