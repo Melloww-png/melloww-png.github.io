@@ -1,1421 +1,1000 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#E8DAB2">
-  <meta name="description" content="Daniel Clementrich Houston — aspiring SOC analyst sharing security labs, Python projects, web applications and source code.">
-  <meta property="og:title" content="Daniel Clementrich Houston | Cybersecurity Portfolio">
-  <meta property="og:description" content="Security and cloud projects, a library system, grade calculator, local bank lab and a Python lyrics animation, with direct GitHub links.">
-  <meta property="og:type" content="website">
-
-  <title>Daniel Clementrich Houston | Cybersecurity Portfolio</title>
-
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='12'%20fill='%23A45A3D'/%3E%3Ctext%20x='32'%20y='45'%20text-anchor='middle'%20font-family='serif'%20font-size='44'%20fill='%23E8DAB2'%3Ed%3C/text%3E%3C/svg%3E">
-  <link rel="preload" href="assets/manrope-regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261013-2">
-</head>
-
-<body id="top">
-  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false">
-    <symbol id="icon-email" viewBox="0 0 24 24">
-      <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"></rect>
-      <path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-    </symbol>
-
-    <symbol id="icon-linkedin" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
-    </symbol>
-
-    <symbol id="icon-github" viewBox="0 0 24 24">
-      <path d="M9 19c-4.3 1.3-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.7c3-.3 6.1-1.5 6.1-6.7A5.2 5.2 0 0 0 18.8 5a4.9 4.9 0 0 0-.1-3.7S17.5 1 15 2.7a12.7 12.7 0 0 0-6 0C6.5 1 5.3 1.3 5.3 1.3A4.9 4.9 0 0 0 5.2 5a5.2 5.2 0 0 0-1.4 3.7c0 5.2 3.1 6.4 6.1 6.7A3.4 3.4 0 0 0 9 18.1V22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-    </symbol>
-
-    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
-      <path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-    </symbol>
-
-    <symbol id="icon-arrow-left" viewBox="0 0 24 24">
-      <path d="M19 12H5m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-    </symbol>
-  </svg>
-
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header wrap">
-    <a class="wordmark" href="#home" aria-label="Daniel, home">Daniel</a>
-
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="#home" data-route="home">Home</a>
-      <a href="#projects" data-route="projects">Projects</a>
-      <a href="#about" data-route="about">About me</a>
-      <a href="#journey" data-route="journey">Journey</a>
-      <a class="nav-contact" href="#contact" data-route="contact">
-        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <use href="#icon-email"></use>
-        </svg>
-        Contact
-      </a>
-    </nav>
-  </header>
-
-  <main id="main" tabindex="-1">
-
-    <!-- HOME -->
-
-    <section class="hero view wrap" id="home" data-view="Home" aria-labelledby="hero-title">
-      <div class="eyebrow hero-eyebrow">
-        Aspiring SOC analyst
-        <span>Singapore</span>
-      </div>
-
-      <h1 id="hero-title" class="view-title" tabindex="-1">
-        Daniel Clementrich<br>
-        <span>Houston.</span>
-      </h1>
-
-      <div class="hero-bottom">
-        <div class="hero-intro">
-          <p class="lead">
-            Practical cybersecurity skills.<br>
-            Demonstrated through working projects.
-          </p>
-
-          <p>
-            Analytical and detail-oriented, I bring practical cybersecurity
-            skills, clear communication and a methodical approach to solving
-            problems, with a career focus on SOC analysis and cloud security.
-          </p>
-
-          <div class="actions">
-            <a class="button primary" href="#projects">
-              View my projects
-              <svg class="icon arrow-twirl" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-arrow-right"></use>
-              </svg>
-            </a>
-            <a class="button" href="#about">A little about me</a>
-          </div>
-
-          <!-- RESUME BUTTONS -->
-
-          <div class="actions" role="group" aria-label="Résumé">
-            <a
-              class="button"
-              href="assets/Daniel-Clementrich-Houston-Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
-                <path d="M14 2v6h6M8 13h8M8 17h6"></path>
-              </svg>
-              View résumé
-            </a>
-
-            <a
-              class="button"
-              href="assets/Daniel-Clementrich-Houston-Resume.pdf"
-              download="Daniel-Clementrich-Houston-Resume.pdf"
-            >
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"></path>
-              </svg>
-              Download résumé
-            </a>
-          </div>
-
-          <div class="social-links" aria-label="Contact and social links">
-            <a href="mailto:danielclementrich09@gmail.com">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-email"></use>
-              </svg>
-              Email me
-            </a>
-
-            <a href="https://github.com/Melloww-png" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-github"></use>
-              </svg>
-              GitHub
-            </a>
-
-            <a href="https://www.linkedin.com/in/daniel-clementrich-houston-0782463b3/" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-linkedin"></use>
-              </svg>
-              LinkedIn
-            </a>
-          </div>
-        </div>
-
-        <aside class="current-panel" aria-label="Current focus and latest project">
-          <div class="currently">
-            <span class="eyebrow">Current focus</span>
-            <p>TryHackMe SAL1</p>
-            <span class="status">Exam preparation in progress</span>
-            <div class="current-note">
-              Practising security monitoring and alert investigation while
-              working towards a SOC analyst role.
-            </div>
-          </div>
-
-          <a class="home-preview" href="#soc-siem-simulator">
-            <span class="eyebrow">Latest project</span>
-            <img
-              src="Pictures%20for%20the%20website/soc-siem-dashboard.png"
-              alt="Preview of my SOC/SIEM dashboard with simulated login events."
-              width="320"
-              height="147"
-              decoding="async"
-            >
-            <strong>SOC/SIEM Dashboard Simulator</strong>
-            <span class="proof-note">
-              11 automated tests passed on Windows · Simulated login events
-            </span>
-            <span class="preview-link">
-              Take a closer look
-              <svg class="icon arrow-twirl" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-arrow-right"></use>
-              </svg>
-            </span>
-          </a>
-        </aside>
-      </div>
-
-      <div class="hero-foot">
-        <span>Python · Networks · Cloud</span>
-        <a href="#projects">
-          Explore all 11 projects
-          <svg class="icon arrow-twirl" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <use href="#icon-arrow-right"></use>
-          </svg>
-        </a>
-        <span>Portfolio / 2026</span>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-
-    <section class="section view wrap" id="projects" data-view="Projects" aria-labelledby="work-title">
-      <div class="view-toolbar">
-        <a class="view-back" href="#home">
-          <svg class="icon icon-back" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <use href="#icon-arrow-left"></use>
-          </svg>
-          Back home
-        </a>
-        <span class="eyebrow">Projects / 2026</span>
-      </div>
-
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">01 / Projects</span>
-          <h2 id="work-title" class="view-title" tabindex="-1">
-            Projects, code<br>
-            and experiments.
-          </h2>
-        </div>
-        <p>
-          Security and cloud labs, small applications and a side project made
-          for fun. Open the details to see how each project works, or go
-          straight to its GitHub repository.
-        </p>
-      </div>
-
-      <nav class="project-index" aria-label="Jump to a project">
-        <a href="#soc-siem-simulator"><span>01</span> SOC/SIEM</a>
-        <a href="#firewall-simulator"><span>02</span> Firewall</a>
-        <a href="#secure-mail"><span>03</span> Cryptography</a>
-        <a href="#smart-bin"><span>04</span> Cloud &amp; IoT</a>
-        <a href="#owasp-juice-shop"><span>05</span> Web security</a>
-        <a href="#bank-lab"><span>06</span> Bank lab</a>
-        <a href="#digital-forensics"><span>07</span> Forensics</a>
-        <a href="#library-system"><span>08</span> Library</a>
-        <a href="#grade-calculator"><span>09</span> Grades</a>
-        <a href="#portfolio-site"><span>10</span> Portfolio</a>
-        <a href="#christmas-lyrics"><span>11</span> Lyrics</a>
-      </nav>
-
-      <div class="project-group-heading">
-        <span class="eyebrow">Security &amp; cloud</span>
-        <p>Monitoring, cryptography and controlled security labs.</p>
-      </div>
-
-      <!-- 01: SOC/SIEM -->
-
-      <article class="project" id="soc-siem-simulator" tabindex="-1">
-        <div class="project-meta">
-          <span class="project-number">01</span>
-          <span>Independent project / 2026</span>
-        </div>
-
-        <div class="project-body">
-          <h3>SOC/SIEM Dashboard Simulator</h3>
-          <p>
-            I built a local Python dashboard to generate fictional login events,
-            store them in SQLite and flag repeated failed logins. Each alert links
-            to its supporting events and timeline so I can review why the rule
-            matched. All data is simulated; the application does not collect
-            live security logs.
-          </p>
-
-          <ul class="tags" aria-label="Technologies and techniques">
-            <li>Python</li>
-            <li>Flask</li>
-            <li>SQLite</li>
-            <li>Login detection</li>
-            <li>Automated testing</li>
-          </ul>
-
-          <div class="project-links">
-            <a class="repo-link" href="https://github.com/Melloww-png/soc-siem-simulator" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-github"></use>
-              </svg>
-              View repository
-            </a>
-          </div>
-
-          <details>
-            <summary>What I implemented</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Event generation and storage:</strong> creates successful login events or a batch of five failures for a dedicated fictional account. SQLite stores the timestamp, account, host, source IP and outcome for each event.</li>
-                <li><strong>Rolling-window detection:</strong> alerts on at least five failed logins within 300 seconds for the same account, host and source IP. The exact time boundaries are included; successful logins do not count or reset the window.</li>
-                <li><strong>Alert evidence:</strong> shows five qualifying failures in a timeline and suppresses additional matching alerts for five minutes after an alert.</li>
-                <li><strong>Bounded storage:</strong> retains at most 1,000 events and 100 alerts. An alert is removed when its supporting evidence expires.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details>
-            <summary>Testing and connection to SOC analysis</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Verified tests:</strong> passed 11 automated tests on Windows covering normal logins, the four/five-failure threshold, matching fields, 300-second and 301-second boundaries, alert suppression, evidence, persistence and retention limits.</li>
-                <li><strong>Evidence review:</strong> practised reading account, host, IP and timestamp information to understand why a detection matched.</li>
-                <li><strong>Investigation judgement:</strong> tested a scenario where legitimate password mistakes trigger the rule. An alert identifies activity to investigate; it does not automatically prove an attack.</li>
-                <li><strong>Current limits:</strong> one detection rule using generated events in event-time order. Review status, investigation notes, additional rules and Windows/Linux scenarios remain planned. Test results validate these simulated cases, not real-world detection accuracy.</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <div class="project-proof">
-          <span class="eyebrow">Verified result</span>
-          <strong class="big-number">11</strong>
-          <span class="proof-label">automated tests passed on Windows</span>
-          <div class="proof-divider"></div>
-          <span class="proof-note">
-            Simulated data<br>
-            Event review · Login detection · Supporting evidence
-          </span>
-        </div>
-
-        <figure class="project-screenshot">
-          <a href="Pictures%20for%20the%20website/soc-siem-dashboard.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: SOC/SIEM simulator with simulated login events">
-            <img
-              src="Pictures%20for%20the%20website/soc-siem-dashboard.png"
-              alt="SOC/SIEM simulator showing two repeated-failed-login alerts and fictional successful and failed logins for demo.account on LAB-PC-01 from 192.0.2.25."
-              width="560"
-              height="257"
-              loading="lazy"
-              decoding="async"
-            >
-          </a>
-          <figcaption>
-            <strong>Simulated data:</strong> working dashboard with generated
-            login events and repeated-failed-login alerts. Select the image
-            to view it full size.
-          </figcaption>
-        </figure>
-      </article>
-
-      <!-- 02: FIREWALL -->
-
-      <article class="project" id="firewall-simulator" tabindex="-1">
-        <div class="project-meta">
-          <span class="project-number">02</span>
-          <span>Independent project / 2026</span>
-        </div>
-
-        <div class="project-body">
-          <h3>Firewall Simulator</h3>
-          <p>
-            I built a Python firewall simulator to explore how filtering rules
-            control network traffic. It evaluates simulated packets against
-            configured rules and records whether traffic is allowed or blocked.
-            The project models firewall decisions without filtering live
-            network traffic.
-          </p>
-
-          <ul class="tags" aria-label="Technologies">
-            <li>Python</li>
-            <li>SQLite</li>
-            <li>IPv4 validation</li>
-            <li>Packet filtering</li>
-          </ul>
-
-          <div class="project-links">
-            <a class="repo-link" href="https://github.com/Melloww-png/firewall-sim-home-project-" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-github"></use>
-              </svg>
-              View repository
-            </a>
-          </div>
-
-          <details>
-            <summary>What I implemented</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Rule-based filtering:</strong> checks packet information against rules containing a source IP address, port, protocol, action and priority.</li>
-                <li><strong>Rule priority:</strong> uses the configured priority when evaluating filtering rules, making rule order part of the decision process.</li>
-                <li><strong>Input validation:</strong> validates IPv4 addresses to identify malformed input.</li>
-                <li><strong>Traffic logging:</strong> stores allowed and blocked packet events in SQLite so decisions can be reviewed after a simulation.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details>
-            <summary>Testing and security relevance</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Testing:</strong> exercised the filtering logic with valid, invalid and unauthorised traffic scenarios.</li>
-                <li><strong>Security concepts:</strong> applied access-control rules, input validation and event logging in one project.</li>
-                <li><strong>Connection to SOC work:</strong> filtering decisions and packet logs provide a practical foundation for understanding network activity and reviewing blocked traffic.</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <div class="project-proof">
-          <span class="eyebrow">Decision flow</span>
-          <div class="decision">
-            Packet<br>
-            <span>↓</span><br>
-            Rule check<br>
-            <span>↓</span><br>
-            Allow / Block
-          </div>
-          <span class="proof-note">
-            Simulated traffic · Decisions recorded in SQLite
-          </span>
-        </div>
-
-        <figure class="project-screenshot">
-          <a href="Pictures%20for%20the%20website/Firewall%20Simulator.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Firewall Simulator">
-            <img
-              src="Pictures%20for%20the%20website/Firewall%20Simulator.png"
-              alt="Firewall Simulator output showing invalid protocol validation and a TCP packet blocked by the port 23 rule."
-              width="355"
-              height="280"
-              loading="lazy"
-              decoding="async"
-            >
-          </a>
-          <figcaption>
-            Firewall Simulator: input validation and a packet blocked by rule 2
-            on port 23. Select the image to view it full size.
-          </figcaption>
-        </figure>
-      </article>
-
-      <!-- 03: CRYPTOGRAPHY -->
-
-      <article class="project" id="secure-mail" tabindex="-1">
-        <div class="project-meta">
-          <span class="project-number">03</span>
-          <span>Cryptography / 2026</span>
-        </div>
-
-        <div class="project-body">
-          <h3>Secure Mail<br>Cryptography System</h3>
-          <p>
-            I developed a Python project to protect message contents and verify
-            their authenticity. It combines encryption, integrity checks and
-            digital signatures to address three separate questions: who can read
-            a message, whether it has changed, and whether its signature is valid.
-          </p>
-
-          <ul class="tags" aria-label="Technologies">
-            <li>Python</li>
-            <li>AES-256-CBC</li>
-            <li>RSA-2048</li>
-            <li>SHA-256</li>
-            <li>HMAC</li>
-            <li>RSA-PSS</li>
-          </ul>
-
-          <details>
-            <summary>What I implemented</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Message encryption:</strong> uses AES-256-CBC to encrypt message contents and supports decryption with the corresponding key.</li>
-                <li><strong>Key exchange:</strong> uses RSA-2048 to protect the exchange of the symmetric encryption key.</li>
-                <li><strong>Integrity verification:</strong> uses SHA-256 and HMAC to check message integrity and detect unauthorised modifications.</li>
-                <li><strong>Digital signatures:</strong> uses RSA-PSS to sign messages and verify signatures using the corresponding public key.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details>
-            <summary>Testing and security relevance</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Testing:</strong> tested encryption, decryption, integrity verification and tampered-message scenarios.</li>
-                <li><strong>Security concepts:</strong> combined confidentiality, integrity and authentication, with a separate mechanism for each purpose.</li>
-                <li><strong>Connection to cloud security:</strong> the project provides a foundation for understanding encryption, key handling and trust in services that exchange sensitive data.</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <div class="project-proof">
-          <span class="eyebrow">Message protection</span>
-          <div class="crypto-line">
-            <strong>256<span>bit</span></strong>
-            <span>AES message encryption</span>
-          </div>
-          <div class="proof-divider"></div>
-          <div class="crypto-line">
-            <strong>2048<span>bit</span></strong>
-            <span>RSA key exchange</span>
-          </div>
-          <span class="proof-note">
-            Integrity checks with HMAC · Signatures with RSA-PSS
-          </span>
-        </div>
-
-        <figure class="project-screenshot">
-          <a href="Pictures%20for%20the%20website/Cryptography%20.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Secure Mail">
-            <img
-              src="Pictures%20for%20the%20website/Cryptography%20.png"
-              alt="Secure Mail command windows showing a message sent, decrypted, and verified for integrity and sender signature."
-              width="265"
-              height="280"
-              loading="lazy"
-              decoding="async"
-            >
-          </a>
-          <figcaption>
-            Secure Mail: message delivery, decryption, integrity checks and sender
-            signature verification. Select the image to view it full size.
-          </figcaption>
-        </figure>
-      </article>
-
-      <!-- 04: SMART BIN -->
-
-      <article class="project" id="smart-bin" tabindex="-1">
-        <div class="project-meta">
-          <span class="project-number">04</span>
-          <span>Cloud &amp; IoT / 2026</span>
-        </div>
-
-        <div class="project-body">
-          <h3>Smart Public Bin<br>Monitoring System</h3>
-          <p>
-            I built a monitoring prototype to show how fill-level data could help
-            identify public bins that need collection. Python simulates ultrasonic
-            sensor readings for four bins, Azure services process and store the
-            data, and a Flask dashboard presents bin status, alerts and
-            historical readings.
-          </p>
-
-          <ul class="tags" aria-label="Technologies">
-            <li>Python</li>
-            <li>Azure IoT Hub</li>
-            <li>Stream Analytics</li>
-            <li>Cosmos DB</li>
-            <li>Flask</li>
-          </ul>
-
-          <div class="project-links">
-            <a class="repo-link" href="https://github.com/Melloww-png/smart-bin-monitoring" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-github"></use>
-              </svg>
-              View repository
-            </a>
-          </div>
-
-          <details>
-            <summary>What I implemented</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Sensor simulation:</strong> models ultrasonic sensor behaviour to generate changing waste-level readings for four bins without physical sensor hardware.</li>
-                <li><strong>Cloud data flow:</strong> sends readings through Azure IoT Hub and Stream Analytics before storing them in Azure Cosmos DB.</li>
-                <li><strong>Status detection:</strong> identifies nearly-full and full bins, with collection alerts for full bins.</li>
-                <li><strong>Monitoring dashboard:</strong> uses Flask to display fill levels, individual bin status, alerts and previous readings.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details>
-            <summary>Scenario handling and practical relevance</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Waste scenarios:</strong> supports random, low, high and full waste levels to exercise different monitoring conditions.</li>
-                <li><strong>Operational purpose:</strong> brings the status of multiple bins into one view so a person can identify which bins need attention.</li>
-                <li><strong>Connection to cloud security:</strong> provides experience tracing data across connected devices, cloud processing, storage and a web application.</li>
-                <li><strong>Project scope:</strong> a prototype using simulated readings; it does not represent a live deployment of public bins.</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <div class="project-proof">
-          <span class="eyebrow">Project scope</span>
-          <strong class="big-number">04</strong>
-          <span class="proof-label">simulated public bins</span>
-          <div class="proof-divider"></div>
-          <span class="proof-note">
-            Python simulation → IoT Hub → Stream Analytics → Cosmos DB<br>
-            Flask dashboard for monitoring
-          </span>
-        </div>
-
-        <figure class="project-screenshot">
-          <a href="Pictures%20for%20the%20website/IoT%20Azure%20picture.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Smart Bin Monitoring">
-            <img
-              src="Pictures%20for%20the%20website/IoT%20Azure%20picture.png"
-              alt="Azure Cosmos DB Data Explorer showing a stored reading for BIN001 at 100 percent fill, with a collection alert."
-              width="526"
-              height="280"
-              loading="lazy"
-              decoding="async"
-            >
-          </a>
-          <figcaption>
-            Smart Bin Monitoring: a full-bin reading stored in Azure Cosmos DB
-            with a collection alert. Select the image to view it full size.
-          </figcaption>
-        </figure>
-      </article>
-
-      <!-- 05: OWASP JUICE SHOP -->
-
-      <article class="project" id="owasp-juice-shop" tabindex="-1">
-        <div class="project-meta">
-          <span class="project-number">05</span>
-          <span>Web application security / 2026</span>
-        </div>
-
-        <div class="project-body">
-          <h3>OWASP Juice Shop<br>Security Assessment</h3>
-          <p>
-            I assessed OWASP Juice Shop, an intentionally vulnerable web
-            application, in a controlled local lab using Kali Linux. I used
-            Burp Suite and browser developer tools to examine requests,
-            demonstrate security weaknesses and document their impact,
-            with recommendations for addressing each finding.
-          </p>
-
-          <ul class="tags" aria-label="Tools and techniques">
-            <li>Burp Suite</li>
-            <li>Browser developer tools</li>
-            <li>Kali Linux</li>
-            <li>Web application testing</li>
-          </ul>
-
-          <details>
-            <summary>What I assessed</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>SQL injection and data exposure:</strong> tested the product-search endpoint and demonstrated how manipulated input could expose user email addresses and password hashes from the lab database.</li>
-                <li><strong>Cross-site scripting (XSS):</strong> tested search input to demonstrate script execution when user-controlled content was handled insecurely.</li>
-                <li><strong>Server-side input validation:</strong> intercepted a feedback request in Burp Suite and changed its rating to zero, showing that the server accepted a value outside the options provided by the interface.</li>
-                <li><strong>CAPTCHA bypass:</strong> used Burp Proxy, Repeater and Intruder to examine and replay feedback requests, demonstrating that CAPTCHA values could be reused for repeated submissions.</li>
-                <li><strong>Predictable passwords:</strong> used challenge clues and publicly available information to identify a predictable password, demonstrating why password length alone does not ensure strong authentication.</li>
-                <li><strong>Chatbot prompt manipulation:</strong> repeated requests to the support chatbot until it disclosed a coupon code, highlighting weaknesses in how it enforced restrictions across repeated interactions.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details>
-            <summary>Evidence, recommendations and security relevance</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Assessment report:</strong> documented the test methods, observed behaviour, security impact and supporting screenshots for each finding.</li>
-                <li><strong>Recommended mitigations:</strong> proposed parameterised queries, safe output encoding, server-side validation, single-use CAPTCHA verification, request limits and stronger authentication controls.</li>
-                <li><strong>Connection to security operations:</strong> practised analysing HTTP requests, recognising malicious input and communicating findings with clear evidence and actionable remediation advice.</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <div class="project-proof">
-          <span class="eyebrow">Assessment scope</span>
-          <strong class="big-number">06</strong>
-          <span class="proof-label">documented security findings</span>
-          <div class="proof-divider"></div>
-          <span class="proof-note">
-            Controlled local lab<br>
-            Request analysis · Evidence · Recommended fixes
-          </span>
-        </div>
-
-        <figure class="project-screenshot">
-          <a href="Pictures%20for%20the%20website/OWASP%20JUICE%20SHOP.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Screenshot from my OWASP Juice Shop security assessment.">
-            <img
-              src="Pictures%20for%20the%20website/OWASP%20JUICE%20SHOP.png"
-              alt="Screenshot from my OWASP Juice Shop security assessment."
-              width="510"
-              loading="lazy"
-              decoding="async"
-            >
-          </a>
-          <figcaption>
-            OWASP Juice Shop: evidence from my local security assessment.
-            Select the image to view it full size.
-          </figcaption>
-        </figure>
-      </article>
-
-      <!-- 06: BANK LAB -->
-
-      <article class="project" id="bank-lab" tabindex="-1">
-        <div class="project-meta">
-          <span class="project-number">06</span>
-          <span>Secure programming coursework / 2026</span>
-        </div>
-
-        <div class="project-body">
-          <h3>Bank Website Security Lab</h3>
-          <p>
-            A local banking demo built with Flask and SQLite for secure-programming
-            coursework. It has customer accounts, transfers, borrowing, support
-            and admin pages. I use fictional accounts and balances to explore how
-            common web security weaknesses affect these workflows.
-          </p>
-
-          <ul class="tags" aria-label="Technologies and techniques">
-            <li>Python</li>
-            <li>Flask</li>
-            <li>SQLite</li>
-            <li>Web security</li>
-            <li>Local lab</li>
-          </ul>
-
-          <div class="project-links">
-            <a class="repo-link" href="https://github.com/Melloww-png/local-bank-cw2" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-github"></use>
-              </svg>
-              View repository
-            </a>
-          </div>
-
-          <details>
-            <summary>What I built</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Banking workflows:</strong> customer registration and login, account search, transfers, borrowing, profiles and support messages.</li>
-                <li><strong>Admin workflows:</strong> customer management, debt handling and giveaway selection.</li>
-                <li><strong>Learning goal:</strong> demonstrate security weaknesses, document their impact and work towards a separate fixed version. The coursework is still in progress.</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <div class="project-proof">
-          <span class="eyebrow">Coursework lab</span>
-          <p class="proof-heading">Banking workflows<br>in a local lab.</p>
-          <span class="proof-note">
-            Fictional accounts and balances · Coursework in progress
-          </span>
-        </div>
-      </article>
-
-      <!-- 07: DIGITAL FORENSICS -->
-
-      <article class="project" id="digital-forensics" tabindex="-1">
-        <div class="project-meta">
-          <span class="project-number">07</span>
-          <span>Digital forensics coursework / 2026</span>
-        </div>
-
-        <div class="project-body">
-          <h3>Digital Forensics<br>Investigation</h3>
-          <p>
-            I examined the Mantooth.E01 forensic disk image using Autopsy and
-            FTK. I analysed deleted files, browsing activity and email artefacts,
-            then wrote a report connecting the evidence to the investigation.
-            The project helped me practise careful evidence handling and explain
-            how individual findings support a conclusion.
-          </p>
-
-          <ul class="tags" aria-label="Tools and techniques">
-            <li>Autopsy</li>
-            <li>FTK</li>
-            <li>Disk image analysis</li>
-            <li>Evidence handling</li>
-            <li>Forensic reporting</li>
-          </ul>
-
-          <details>
-            <summary>What I investigated</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Disk examination:</strong> examined the supplied image for files, user activity and artefacts relevant to the coursework investigation.</li>
-                <li><strong>Deleted files and activity:</strong> analysed deleted files, browser history and email evidence to understand the activity recorded on the system.</li>
-                <li><strong>Evidence and reporting:</strong> documented findings, supporting screenshots, evidence handling and chain of custody in a forensic report.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details>
-            <summary>Skills practised and security relevance</summary>
-            <div class="detail-content">
-              <p>
-                Digital forensics, deleted-file recovery, artefact analysis,
-                evidence preservation, chain of custody and technical report
-                writing. These skills support investigating system activity
-                and explaining findings with evidence.
-              </p>
-            </div>
-          </details>
-        </div>
-
-        <div class="project-proof">
-          <span class="eyebrow">Investigation source</span>
-          <p class="proof-heading">Mantooth.E01</p>
-          <span class="proof-label">forensic disk image examined</span>
-          <div class="proof-divider"></div>
-          <span class="proof-note">
-            Autopsy &amp; FTK<br>
-            Deleted files · Browsing activity · Email artefacts
-          </span>
-        </div>
-
-        <figure class="project-screenshot">
-          <a href="Pictures%20for%20the%20website/Forensics.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Screenshot from my Mantooth.E01 forensic investigation.">
-            <img
-              src="Pictures%20for%20the%20website/Forensics.png"
-              alt="Screenshot from my Mantooth.E01 forensic investigation."
-              width="510"
-              loading="lazy"
-              decoding="async"
-            >
-          </a>
-          <figcaption>
-            Digital forensics: evidence from my coursework investigation
-            of Mantooth.E01. Select the image to view it full size.
-          </figcaption>
-        </figure>
-      </article>
-
-      <div class="project-group-heading">
-        <span class="eyebrow">Software &amp; web projects</span>
-        <p>Small applications that solve a practical problem.</p>
-      </div>
-
-      <!-- 08: LIBRARY MANAGEMENT -->
-
-      <article class="project" id="library-system" tabindex="-1">
-        <div class="project-meta">
-          <span class="project-number">08</span>
-          <span>Algorithms &amp; data structures / 2026</span>
-        </div>
-
-        <div class="project-body">
-          <h3>Library Management System</h3>
-          <p>
-            A Python and SQLite application for managing a library. Borrowers can
-            search for items, borrow and return them, and check their fines.
-            Administrators can manage the catalogue and review borrowers.
-            I used it to put object-oriented programming and data structures
-            into a working application.
-          </p>
-
-          <ul class="tags" aria-label="Technologies and techniques">
-            <li>Python</li>
-            <li>SQLite</li>
-            <li>OOP</li>
-            <li>Binary search tree</li>
-            <li>Doubly linked list</li>
-          </ul>
-
-          <div class="project-links">
-            <a class="repo-link" href="https://github.com/Melloww-png/Library-Management-System" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-github"></use>
-              </svg>
-              View repository
-            </a>
-          </div>
-
-          <details>
-            <summary>What I built</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>User roles:</strong> separate borrower and administrator classes and menus.</li>
-                <li><strong>Library operations:</strong> search, borrowing, returns, fine balances and catalogue updates.</li>
-                <li><strong>Data structures:</strong> a binary search tree for library items and a doubly linked list for borrower records.</li>
-                <li><strong>Item types:</strong> books, periodicals and audiobooks share a base library-item class.</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <div class="project-proof">
-          <span class="eyebrow">Working flow</span>
-          <p class="proof-heading">Search.<br>Borrow.<br>Return.</p>
-          <span class="proof-note">Records stored in SQLite</span>
-        </div>
-
-        <figure class="project-screenshot">
-          <a href="Pictures%20for%20the%20website/SOLA%20Algo%26Data%20Structure.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Screenshot of my SOLA Library Management System.">
-            <img
-              src="Pictures%20for%20the%20website/SOLA%20Algo%26Data%20Structure.png"
-              alt="Screenshot of my SOLA Library Management System."
-              width="510"
-              loading="lazy"
-              decoding="async"
-            >
-          </a>
-          <figcaption>
-            SOLA: my library management project using object-oriented programming
-            and data structures. Select the image to view it full size.
-          </figcaption>
-        </figure>
-      </article>
-
-      <!-- 09: GRADE CALCULATOR -->
-
-      <article class="project" id="grade-calculator" tabindex="-1">
-        <div class="project-meta">
-          <span class="project-number">09</span>
-          <span>Small web application / 2026</span>
-        </div>
-
-        <div class="project-body">
-          <h3>Coursework Grade Calculator</h3>
-          <p>
-            A small browser tool that combines two coursework scores using their
-            percentage weights. It checks the inputs, calculates the final score
-            and shows a classification using the thresholds defined in the code.
-          </p>
-
-          <ul class="tags" aria-label="Technologies and techniques">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Input validation</li>
-          </ul>
-
-          <div class="project-links">
-            <a class="repo-link" href="https://github.com/Melloww-png/grade-calculator" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-github"></use>
-              </svg>
-              View repository
-            </a>
-          </div>
-
-          <details>
-            <summary>What I built</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Weighted calculation:</strong> combines CW1 and CW2 scores according to the weights entered by the user.</li>
-                <li><strong>Input checks:</strong> requires every field, checks scores and weights are between 0 and 100, and requires the two weights to total 100%.</li>
-                <li><strong>Result display:</strong> shows the final score to two decimal places and the classification calculated by the script.</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <div class="project-proof">
-          <span class="eyebrow">Example calculation</span>
-          <strong class="example-result">66.00%</strong>
-          <span class="proof-note">
-            CW1: 80 × 30%<br>
-            CW2: 60 × 70%
-          </span>
-        </div>
-      </article>
-
-      <!-- 10: PORTFOLIO WEBSITE -->
-
-      <article class="project" id="portfolio-site" tabindex="-1">
-        <div class="project-meta">
-          <span class="project-number">10</span>
-          <span>Web development / 2026</span>
-        </div>
-
-        <div class="project-body">
-          <h3>Cybersecurity Portfolio</h3>
-          <p>
-            The website you’re looking at. I use it to explain my projects, show
-            screenshots and make the source code easy to find. Home, Projects,
-            About Me, Journey and Contact switch within the same page.
-          </p>
-
-          <ul class="tags" aria-label="Technologies and techniques">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>GitHub Pages</li>
-          </ul>
-
-          <div class="project-links">
-            <a class="repo-link" href="https://github.com/Melloww-png/melloww-png.github.io" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-github"></use>
-              </svg>
-              View repository
-            </a>
-          </div>
-
-          <details>
-            <summary>What I built</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Navigation:</strong> separate views in one HTML file, with direct links to individual projects.</li>
-                <li><strong>Presentation:</strong> a flat colour palette, locally hosted Manrope fonts and screenshots from my projects.</li>
-                <li><strong>Usability:</strong> responsive layouts, keyboard focus, a skip link and reduced-motion support.</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <div class="project-proof">
-          <span class="eyebrow">Source included</span>
-          <p class="proof-heading">This site,<br>inside and out.</p>
-          <span class="proof-note">Hosted with GitHub Pages</span>
-        </div>
-      </article>
-
-      <div class="project-group-heading">
-        <span class="eyebrow">Just for fun</span>
-        <p>A little curiosity outside the security labs.</p>
-      </div>
-
-      <!-- 11: LYRICS SIDE PROJECT -->
-
-      <article class="project" id="christmas-lyrics" tabindex="-1">
-        <div class="project-meta">
-          <span class="project-number">11</span>
-          <span>Side project · Just for fun / 2026</span>
-        </div>
-
-        <div class="project-body">
-          <h3>Merry Christmas, Please Don’t Call</h3>
-          <p>
-            A little Python experiment I made after seeing people animate song
-            lyrics with code. It displays timed lyric cards with a typewriter
-            effect and floating music notes. I wanted to see how it worked,
-            so I gave it a try.
-          </p>
-
-          <ul class="tags" aria-label="Technologies and techniques">
-            <li>Python</li>
-            <li>Tkinter</li>
-            <li>Animation</li>
-            <li>Side project</li>
-          </ul>
-
-          <div class="project-links">
-            <a class="repo-link" href="https://github.com/Melloww-png/Merry-Christmas-please-dont-call" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-github"></use>
-              </svg>
-              View repository
-            </a>
-          </div>
-
-          <details>
-            <summary>What I built</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Timed cards:</strong> displays lyric cards at scheduled moments, alternating between two screen positions.</li>
-                <li><strong>Typewriter effect:</strong> reveals the text a character at a time while the cards rise up the screen.</li>
-                <li><strong>Floating notes:</strong> uses random sizes, positions and a gentle sideways motion for the music-note animations.</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <div class="project-proof">
-          <span class="eyebrow">A small experiment</span>
-          <strong class="big-number">16</strong>
-          <span class="proof-label">scheduled lyric cues</span>
-          <span class="proof-note">Made for curiosity and a bit of fun</span>
-        </div>
-      </article>
-
-      <div class="work-footer">
-        <p>More code and experiments on my GitHub.</p>
-        <div class="footer-links">
-          <a class="text-link" href="https://github.com/Melloww-png?tab=repositories" target="_blank" rel="noopener noreferrer">
-            All repositories
-          </a>
-          <a class="text-link" href="https://github.com/Melloww-png/Melloww-png" target="_blank" rel="noopener noreferrer">
-            Profile repository
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT ME -->
-
-    <section class="section view wrap" id="about" data-view="About me" aria-labelledby="about-title">
-      <div class="view-toolbar">
-        <a class="view-back" href="#home">
-          <svg class="icon icon-back" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <use href="#icon-arrow-left"></use>
-          </svg>
-          Back home
-        </a>
-        <span class="eyebrow">About me / 2026</span>
-      </div>
-
-      <div class="about-layout">
-        <div>
-          <span class="eyebrow">02 / A little about me</span>
-          <h2 id="about-title" class="view-title" tabindex="-1">
-            Curious about systems.<br>
-            Careful with the details.
-          </h2>
-
-          <p class="about-copy">
-            I’m Daniel, a cybersecurity student based in Singapore, working
-            towards SOC analysis and cloud security. I’m the kind of person who
-            keeps asking “but how does that actually work?” I like poking around
-            unfamiliar tools, taking things apart in a lab and following the
-            clues until the pieces make sense. Those little “oh, that’s why”
-            moments are a big part of what keeps me interested.
-          </p>
-
-          <p class="about-copy">
-            That curiosity turns into Python projects, security experiments and
-            plenty of trial and error. I enjoy testing an idea, figuring out
-            what went wrong and coming back with a clearer explanation.
-            I bring patience, attention to detail and a bit of playful curiosity
-            to the process. Right now, I’m preparing for TryHackMe SAL1 and
-            learning how to turn that habit of asking questions into careful,
-            useful work on a security team.
-          </p>
-
-          <a class="text-link view-back about-project-link" href="#projects">
-            See where that curiosity takes me
-            <svg class="icon arrow-twirl" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <use href="#icon-arrow-right"></use>
-            </svg>
-          </a>
-
-          <div class="languages">
-            <span class="eyebrow">Languages</span>
-            <ul class="language-list">
-              <li><strong>Indonesian</strong> <span>Native</span></li>
-              <li><strong>English</strong> <span>Fluent</span></li>
-              <li><strong>Chinese</strong> <span>Conversational</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="skills">
-          <h3 class="toolkit-heading"><span>My working toolkit</span></h3>
-
-          <div class="skill-row">
-            <h4>Programming &amp; data</h4>
-            <p>Python, Java, SQL, SQLite</p>
-          </div>
-
-          <div class="skill-row">
-            <h4>Security &amp; systems</h4>
-            <p>
-              Linux, Wireshark, Burp Suite, Nmap, cryptography, firewall rules,
-              simulated event correlation
-            </p>
-          </div>
-
-          <div class="skill-row">
-            <h4>Cloud &amp; development</h4>
-            <p>Microsoft Azure, Flask, Git, GitHub</p>
-          </div>
-
-          <div class="skill-row">
-            <h4>How I work</h4>
-            <p>
-              Problem-solving, analytical thinking, attention to detail,
-              adaptability, initiative and written communication
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- JOURNEY -->
-
-    <section class="section view wrap" id="journey" data-view="Journey" aria-labelledby="journey-title">
-      <div class="view-toolbar">
-        <a class="view-back" href="#home">
-          <svg class="icon icon-back" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <use href="#icon-arrow-left"></use>
-          </svg>
-          Back home
-        </a>
-        <span class="eyebrow">Journey / 2026</span>
-      </div>
-
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">03 / My journey</span>
-          <h2 id="journey-title" class="view-title" tabindex="-1">
-            Education, experience<br>
-            and leadership.
-          </h2>
-        </div>
-      </div>
-
-      <div class="journey-layout">
-        <div>
-          <h3 class="column-heading">Education &amp; training</h3>
-          <ol class="timeline">
-            <li>
-              <span class="eyebrow">Jan 2026 – Mar 2027 · Expected</span>
-              <h4>Bachelor of Cybersecurity</h4>
-              <p>Coventry University, PSB Academy · Singapore</p>
-              <p class="small">
-                Secure programming, cryptography and computer forensics.
-              </p>
-            </li>
-            <li>
-              <span class="eyebrow">Apr 2025 – Dec 2025</span>
-              <h4>Diploma in Cybersecurity</h4>
-              <p>PSB Academy · Singapore</p>
-              <p class="small">Network defence and computer systems.</p>
-            </li>
-            <li>
-              <span class="eyebrow">Sep 2024 – Mar 2025</span>
-              <h4>Certificate in Engineering<br>and Information Technology</h4>
-              <p>PSB Academy · Singapore</p>
-            </li>
-            <li>
-              <span class="eyebrow">Currently studying</span>
-              <h4>TryHackMe SAL1</h4>
-              <p>Exam preparation · SOC Level 1 study path</p>
-            </li>
-          </ol>
-        </div>
-
-        <div>
-          <h3 class="column-heading">Experience &amp; leadership</h3>
-          <ol class="timeline">
-            <li>
-              <span class="eyebrow">2023 – 2024 · Jakarta, Indonesia</span>
-              <h4>KungFu Live Seafood</h4>
-              <p>
-                Managed financial and inventory data in Excel, supported
-                product expansion, and negotiated supplier contracts.
-              </p>
-              <p class="small">
-                Built experience in organising data, solving day-to-day
-                problems and communicating with suppliers.
-              </p>
-            </li>
-            <li>
-              <span class="eyebrow">Aug 2023 – Apr 2024 · Jakarta, Indonesia</span>
-              <h4>Student Council Leader</h4>
-              <p>
-                Organised school events and field trips, managed event budgets,
-                and supported initiatives to address bullying.
-              </p>
-              <p class="small">
-                Coordinated people, planned activities and followed through
-                on responsibilities.
-              </p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-
-    <section class="contact section view wrap" id="contact" data-view="Contact" aria-labelledby="contact-title">
-      <div class="view-toolbar">
-        <a class="view-back" href="#home">
-          <svg class="icon icon-back" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <use href="#icon-arrow-left"></use>
-          </svg>
-          Back home
-        </a>
-        <span class="eyebrow">Contact / 2026</span>
-      </div>
-
-      <span class="eyebrow">04 / Get in touch</span>
-
-      <h2 id="contact-title" class="view-title" tabindex="-1">
-        Let’s start<br>
-        a conversation<span>.</span>
-      </h2>
-
-      <div class="contact-bottom">
-        <p>
-          Interested in my projects or want to discuss a future cybersecurity
-          opportunity? Get in touch by email or connect with me on LinkedIn.
-        </p>
-
-        <div class="actions">
-          <a class="button primary" href="mailto:danielclementrich09@gmail.com">
-            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <use href="#icon-email"></use>
-            </svg>
-            Email me
-          </a>
-
-          <a class="button" href="https://github.com/Melloww-png" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <use href="#icon-github"></use>
-            </svg>
-            GitHub
-          </a>
-
-          <a class="button" href="https://www.linkedin.com/in/daniel-clementrich-houston-0782463b3/" target="_blank" rel="noopener noreferrer">
-            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <use href="#icon-linkedin"></use>
-            </svg>
-            LinkedIn
-          </a>
-        </div>
-      </div>
-
-      <a class="email-address" href="mailto:danielclementrich09@gmail.com">
-        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <use href="#icon-email"></use>
-        </svg>
-        <span>danielclementrich09@gmail.com</span>
-      </a>
-
-      <!-- RESUME BUTTONS -->
-
-      <div class="actions" role="group" aria-label="Résumé">
-        <a
-          class="button"
-          href="assets/Daniel-Clementrich-Houston-Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
-            <path d="M14 2v6h6M8 13h8M8 17h6"></path>
-          </svg>
-          View résumé
-        </a>
-
-        <a
-          class="button"
-          href="assets/Daniel-Clementrich-Houston-Resume.pdf"
-          download="Daniel-Clementrich-Houston-Resume.pdf"
-        >
-          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-            <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"></path>
-          </svg>
-          Download résumé
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer wrap">
-    <span>© 2026 Daniel Clementrich Houston</span>
-    <span>Made with curiosity. Based in Singapore.</span>
-    <a href="#top">Back to top</a>
-  </footer>
-
-  <script>
-    (() => {
-      const views = Array.from(document.querySelectorAll('[data-view]'));
-      const navigation = document.querySelectorAll('.main-nav [data-route]');
-      const main = document.getElementById('main');
-      const baseTitle = 'Daniel Clementrich Houston | Cybersecurity Portfolio';
-
-      function showView(moveFocus = false) {
-        let id;
-
-        try {
-          id = decodeURIComponent(window.location.hash.slice(1)) || 'home';
-        } catch {
-          id = 'home';
-        }
-
-        if (id === 'work') id = 'projects';
-
-        const target = document.getElementById(id);
-        const view = (target && target.closest('[data-view]')) || views[0];
-
-        views.forEach(section => {
-          section.hidden = section !== view;
-        });
-
-        navigation.forEach(link => {
-          if (link.dataset.route === view.id) {
-            link.setAttribute('aria-current', 'page');
-          } else {
-            link.removeAttribute('aria-current');
-          }
-        });
-
-        document.title = view.id === 'home'
-          ? baseTitle
-          : `${view.dataset.view} | ${baseTitle}`;
-
-        const projectTarget =
-          target && target !== view && target.closest('[data-view]');
-
-        if (projectTarget) {
-          if (moveFocus) target.focus({ preventScroll: true });
-          target.scrollIntoView({ block: 'start', behavior: 'instant' });
-        } else {
-          if (moveFocus) {
-            view.querySelector('.view-title').focus({ preventScroll: true });
-          }
-          window.scrollTo({ top: 0, behavior: 'instant' });
-        }
-      }
-
-      window.addEventListener('hashchange', () => showView(true));
-
-      document.addEventListener('click', event => {
-        const link =
-          event.target.closest &&
-          event.target.closest('a[href^="#"]');
-
-        if (
-          !link ||
-          event.defaultPrevented ||
-          event.button > 0 ||
-          event.ctrlKey ||
-          event.metaKey ||
-          event.shiftKey ||
-          event.altKey
-        ) {
-          return;
-        }
-
-        const hash = link.getAttribute('href');
-
-        if (hash === '#main') {
-          event.preventDefault();
-          main.focus({ preventScroll: true });
-          window.scrollTo({ top: 0, behavior: 'instant' });
-        } else if (hash === '#top') {
-          event.preventDefault();
-          const view = views.find(section => !section.hidden);
-          view.querySelector('.view-title').focus({ preventScroll: true });
-          window.scrollTo({ top: 0, behavior: 'instant' });
-        } else if (hash === window.location.hash) {
-          event.preventDefault();
-          showView(true);
-        }
-      });
-
-      showView();
-    })();
-  </script>
-</body>
-</html>
+@font-face {
+  font-family: Manrope;
+  src: url('assets/manrope-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url('assets/manrope-semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url('assets/manrope-extrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --paper: #E8DAB2;
+  --accent: #A45A3D;
+  --ink: #6B4226;
+  --line: #C4B6A6;
+  --space: 72px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 128px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--accent); color: var(--paper); }
+[hidden] { display: none !important; }
+
+a { color: inherit; text-underline-offset: 5px; }
+button, a, summary { -webkit-tap-highlight-color: transparent; }
+a, summary { touch-action: manipulation; }
+
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 6px;
+}
+
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3, h4 { line-height: 1.15; }
+.view-title:focus { outline: none; }
+
+.wrap {
+  width: min(1160px, calc(100% - 80px));
+  margin-inline: auto;
+}
+
+/* Fixed icon dimensions prevent oversized SVG arrows. */
+
+.icon {
+  --icon-size: 18px;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  min-width: var(--icon-size);
+  max-width: var(--icon-size);
+  min-height: var(--icon-size);
+  max-height: var(--icon-size);
+  flex: 0 0 var(--icon-size);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Navigation */
+
+main { min-height: calc(100svh - 188px); }
+.view { padding-block: var(--space); }
+.section { border-top: 1px solid var(--line); }
+.view.section { border-top: 0; }
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+  border-bottom: 1px solid var(--line);
+  gap: 28px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--paper);
+}
+
+.wordmark {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1.8px;
+}
+
+.wordmark span { color: var(--accent); }
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  padding-block: 10px;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover { color: var(--accent); }
+
+.main-nav a[aria-current="page"] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.main-nav .nav-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.main-nav .icon { --icon-size: 15px; }
+
+.view-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 34px;
+}
+
+.view-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+}
+
+.view-back .icon { --icon-size: 14px; }
+
+.eyebrow {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* Home */
+
+.hero { padding-top: 64px; padding-bottom: 32px; }
+
+.hero-eyebrow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 6.8vw, 98px);
+  line-height: 1.06;
+  font-weight: 600;
+  letter-spacing: -5px;
+}
+
+.hero h1 > span { color: var(--accent); }
+
+.hero-bottom {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-top: 46px;
+}
+
+.hero-intro,
+.current-panel,
+.project-body,
+.project-proof {
+  min-width: 0;
+}
+
+.lead {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -.65px;
+}
+
+.hero-intro > p:not(.lead) {
+  max-width: 560px;
+  margin-top: 20px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 11px 25px;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background .18s, color .18s;
+}
+
+.button .icon { --icon-size: 16px; }
+
+.button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.button:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 26px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.social-links .icon { color: var(--accent); }
+
+.currently {
+  border-top: 2px solid var(--accent);
+  padding-top: 23px;
+}
+
+.currently > p {
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.status {
+  display: block;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.current-note {
+  border-top: 1px solid var(--line);
+  margin-top: 24px;
+  padding-top: 20px;
+  font-size: 14px;
+  max-width: 320px;
+}
+
+.home-preview {
+  display: block;
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.home-preview img {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  object-position: left top;
+  margin-block: 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.home-preview strong {
+  display: block;
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.home-preview .proof-note { margin-top: 8px; }
+
+.preview-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.preview-link .icon { --icon-size: 14px; }
+.home-preview:hover .preview-link { color: var(--accent); }
+
+.hero-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 48px;
+  padding-block: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.hero-foot a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 600;
+}
+
+.hero-foot .icon { --icon-size: 15px; }
+
+/* Only forward arrows twirl. */
+
+.arrow-twirl {
+  transform-origin: center;
+  animation: arrow-twirl 4s ease-in-out infinite;
+}
+
+.icon-back { animation: none; }
+
+@keyframes arrow-twirl {
+  0%, 70% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Projects */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 60px;
+  margin-bottom: 42px;
+}
+
+.section-heading h2,
+.about-layout h2 {
+  font-size: clamp(32px, 3.5vw, 47px);
+  font-weight: 600;
+  letter-spacing: -1.7px;
+  margin-top: 21px;
+}
+
+.section-heading > p { max-width: 350px; }
+
+.project-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  padding-block: 18px;
+  margin-bottom: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.project-index a {
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  padding-block: 5px;
+}
+
+.project-index a:hover { text-decoration: underline; }
+
+.project-index a span {
+  color: var(--accent);
+  margin-right: 7px;
+}
+
+.project-group-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-block: 20px;
+  margin-top: 20px;
+}
+
+.project-group-heading > p {
+  max-width: 400px;
+  font-size: 13px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 85px minmax(0, 1fr) 220px;
+  gap: 28px;
+  padding-block: 44px;
+  border-top: 1px solid var(--line);
+}
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.project-number {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.project-meta > span:last-child {
+  font-size: 12px;
+  line-height: 1.7;
+  max-width: 120px;
+}
+
+.project h3 {
+  font-size: 28px;
+  letter-spacing: -.8px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.project-body > p { max-width: 560px; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 22px 0;
+}
+
+.tags li {
+  font-size: 12px;
+  border: 1px solid var(--line);
+  padding: 4px 11px;
+  border-radius: 3px;
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin: 18px 0 4px;
+}
+
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding-block: 7px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.repo-link .icon { --icon-size: 16px; }
+
+details {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding-block: 10px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+summary::marker { color: var(--accent); }
+.detail-content { padding-top: 6px; }
+.detail-content ul { padding-left: 20px; margin: 0; }
+.detail-content li + li { margin-top: 10px; }
+
+.project-proof {
+  align-self: start;
+  border-left: 1px solid var(--line);
+  padding: 4px 0 8px 28px;
+}
+
+.project-proof .eyebrow { letter-spacing: 1.3px; }
+
+.decision {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-top: 25px;
+}
+
+.decision > span {
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--accent);
+}
+
+.proof-note {
+  display: block;
+  font-size: 12px;
+  line-height: 1.8;
+  margin-top: 17px;
+}
+
+.proof-heading {
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -.5px;
+  margin-top: 22px;
+}
+
+.crypto-line { margin-top: 18px; }
+
+.crypto-line strong {
+  display: block;
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.crypto-line strong span {
+  font-size: 14px;
+  margin-left: 8px;
+  letter-spacing: 0;
+}
+
+.crypto-line > span { font-size: 12px; }
+
+.proof-divider {
+  height: 1px;
+  background: var(--line);
+  margin-top: 22px;
+}
+
+.big-number {
+  display: block;
+  font-size: 66px;
+  line-height: 1.15;
+  letter-spacing: -4px;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.proof-label { font-size: 14px; }
+
+.example-result {
+  display: block;
+  margin-top: 18px;
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+}
+
+/* Screenshots stay inside the project layout. */
+
+.project-screenshot {
+  grid-column: 2 / -1;
+  min-width: 0;
+  width: 100%;
+  max-width: 560px;
+  margin: 8px 0 0;
+}
+
+.project-screenshot > a {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.project-screenshot img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
+  object-position: left center;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.project-screenshot figcaption {
+  width: 100%;
+  max-width: 560px;
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.work-footer {
+  border-top: 1px solid var(--line);
+  padding-top: 26px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.text-link { font-weight: 600; }
+
+/* About */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 100px;
+}
+
+.about-layout h2 { margin-bottom: 28px; }
+.about-copy + .about-copy { margin-top: 20px; }
+.about-project-link { margin-top: 26px; }
+.languages { margin-top: 34px; }
+
+.language-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.language-list strong { font-weight: 800; }
+.skills { padding-top: 3px; }
+
+.skills > h3 {
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 26px;
+}
+
+.toolkit-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.toolkit-heading::before,
+.toolkit-heading::after {
+  content: "";
+  flex: 1;
+  min-width: 16px;
+  height: 1px;
+  background: var(--line);
+}
+
+.toolkit-heading > span { min-width: 0; }
+
+.skill-row {
+  border-top: 1px solid var(--line);
+  padding-block: 22px;
+}
+
+.skill-row h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+
+.skill-row p { font-size: 14px; }
+
+/* Journey */
+
+.journey-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+.column-heading {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 34px;
+}
+
+.timeline { list-style: none; padding: 0; margin: 0; }
+
+.timeline li {
+  border-top: 1px solid var(--line);
+  padding-block: 26px;
+}
+
+.timeline h4 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -.5px;
+  margin: 13px 0;
+}
+
+.timeline .small { font-size: 14px; margin-top: 12px; }
+.timeline .eyebrow { font-size: 11px; letter-spacing: 1.1px; }
+
+/* Contact */
+
+.contact h2 {
+  font-size: clamp(46px, 6.5vw, 86px);
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -3px;
+  margin-top: 30px;
+}
+
+.contact h2 span { color: var(--accent); }
+
+.contact-bottom {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 48px;
+  margin-top: 35px;
+}
+
+.contact-bottom > p { max-width: 490px; }
+.contact-bottom .actions { flex-shrink: 0; margin-top: 0; }
+
+.email-address {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  font-size: 14px;
+  min-height: 44px;
+  max-width: 100%;
+}
+
+.email-address span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.email-address .icon { color: var(--accent); }
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 28px;
+  font-size: 12px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 12px;
+  transform: translateY(-160%);
+  z-index: 20;
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+/* Larger screens */
+
+@media (min-width: 1500px) {
+  .hero h1 { font-size: 98px; }
+}
+
+/* Tablets and smaller laptops */
+
+@media (max-width: 1050px) {
+  .wrap { width: calc(100% - 64px); }
+  .main-nav { gap: 22px; }
+  .hero-bottom { gap: 60px; }
+  .project { grid-template-columns: 80px minmax(0, 1fr) 205px; gap: 24px; }
+  .project-proof { padding-left: 24px; }
+  .about-layout, .journey-layout { gap: 60px; }
+  .contact-bottom { align-items: start; flex-direction: column; gap: 26px; }
+  .section-heading > p { max-width: 270px; }
+  .hero h1 { letter-spacing: -3px; }
+}
+
+/* Phones */
+
+@media (max-width: 760px) {
+  :root { --space: 48px; }
+
+  html { scroll-padding-top: 160px; }
+  .wrap { width: calc(100% - 40px); }
+
+  .site-header {
+    min-height: 0;
+    padding-block: 20px 12px;
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-nav { width: 100%; gap: 4px 18px; }
+  .main-nav a { font-size: 12px; min-height: 44px; padding-block: 10px; }
+  .main-nav .icon { display: none; }
+  .wordmark { font-size: 27px; }
+
+  .view-toolbar { margin-bottom: 26px; }
+  .view-toolbar > .eyebrow { font-size: 10px; letter-spacing: 1px; }
+
+  .hero { padding-top: 40px; padding-bottom: 20px; }
+  .hero-eyebrow { font-size: 10px; letter-spacing: 1.3px; gap: 20px; }
+
+  .hero h1 {
+    font-size: clamp(37px, 7.4vw, 57px);
+    letter-spacing: -2px;
+    line-height: 1.13;
+  }
+
+  .hero-bottom { grid-template-columns: 1fr; gap: 36px; margin-top: 32px; }
+  .lead { font-size: 22px; }
+  .hero-intro > p:not(.lead) { font-size: 15px; }
+
+  .currently { padding-top: 19px; }
+  .currently > p { font-size: 22px; }
+  .current-note { max-width: none; margin-top: 18px; padding-top: 16px; }
+  .home-preview { max-width: 420px; }
+
+  .hero-foot { margin-top: 36px; font-size: 10px; letter-spacing: .4px; }
+  .hero-foot > span:last-child { display: none; }
+
+  .section-heading { display: block; margin-bottom: 30px; }
+  .section-heading > p { max-width: 100%; margin-top: 24px; }
+  .section-heading h2, .about-layout h2 { font-size: 34px; letter-spacing: -1.2px; }
+
+  .project-index { gap: 6px 20px; }
+  .project-index a { min-height: 44px; display: inline-flex; align-items: center; }
+
+  .project-group-heading { display: block; padding-block: 16px; }
+  .project-group-heading > p { margin-top: 8px; }
+
+  .project { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-block: 34px; }
+  .project-meta { flex-direction: row; align-items: center; gap: 18px; }
+  .project-meta > span:last-child { max-width: none; }
+  .project h3 { font-size: 27px; margin-bottom: 16px; }
+
+  .project-proof {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding: 22px 0 0;
+  }
+
+  .decision { line-height: 1.4; font-size: 20px; }
+  .decision br { display: none; }
+
+  .decision > span {
+    display: inline-block;
+    transform: rotate(-90deg);
+    margin-inline: 6px;
+  }
+
+  .crypto-line { display: inline-block; margin-right: 28px; }
+  .project-proof:has(.crypto-line) .proof-divider { display: none; }
+
+  .big-number { font-size: 66px; letter-spacing: -3px; }
+  .proof-divider { margin-top: 15px; }
+  .proof-heading { font-size: 21px; margin-top: 16px; }
+
+  .project-screenshot { grid-column: 1 / -1; margin-top: 0; }
+  .project-screenshot img { max-height: 220px; }
+
+  .work-footer { flex-direction: column; gap: 12px; }
+  .about-layout, .journey-layout { grid-template-columns: 1fr; gap: 44px; }
+  .skills > h3 { margin-bottom: 22px; }
+
+  .contact h2 { font-size: 48px; letter-spacing: -2px; }
+  .contact-bottom { margin-top: 28px; gap: 24px; }
+  .contact-bottom .actions { flex-shrink: 1; }
+
+  .button { padding-inline: 21px; }
+
+  .site-footer {
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    font-size: 11px;
+  }
+
+  .site-footer > span:nth-child(2) { display: none; }
+  .site-footer > a { margin-left: auto; }
+}
+
+/* Smaller phones */
+
+@media (max-width: 380px) {
+  .main-nav { column-gap: 13px; }
+  .hero h1 { font-size: 34px; }
+  .hero-foot { align-items: start; flex-direction: column; gap: 12px; }
+}
+
+/* Respect reduced-motion preferences. */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+  .arrow-twirl { animation: none; }
+}
+
+/* Print */
+
+@media print {
+  [hidden], .view[hidden] { display: block !important; }
+  .wrap { width: 100%; }
+
+  .site-header,
+  .actions,
+  .social-links,
+  .hero-foot,
+  .site-footer,
+  .view-toolbar,
+  .project-index {
+    display: none;
+  }
+
+  .hero { padding-top: 0; }
+  .hero h1 { font-size: 46px; }
+  .hero-bottom { gap: 30px; }
+  .view { padding-block: 30px; }
+
+  .project {
+    grid-template-columns: 50px 1fr 160px;
+    gap: 20px;
+    break-inside: avoid;
+  }
+
+  .section-heading { margin-bottom: 24px; }
+  .contact h2 { font-size: 42px; }
+  details:not([open]) { display: none; }
+  body { font-size: 11px; }
+  .project h3 { font-size: 22px; }
+  .project-screenshot img { max-height: 250px; }
+}
