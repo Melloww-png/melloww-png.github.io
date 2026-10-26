@@ -998,3 +998,30 @@ summary::marker { color: var(--accent); }
   .project h3 { font-size: 22px; }
   .project-screenshot img { max-height: 250px; }
 }
+
+/* Bank project screenshots */
+.bank-gallery {
+  grid-column: 2 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  min-width: 0;
+}
+
+.bank-gallery .project-screenshot {
+  grid-column: auto;
+  max-width: none;
+  margin: 0;
+}
+
+.bank-gallery .project-screenshot > a,
+.bank-gallery .project-screenshot img {
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .bank-gallery {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
