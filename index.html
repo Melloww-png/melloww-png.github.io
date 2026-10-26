@@ -13,7 +13,7 @@
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='12'%20fill='%23A45A3D'/%3E%3Ctext%20x='32'%20y='45'%20text-anchor='middle'%20font-family='serif'%20font-size='44'%20fill='%23E8DAB2'%3Ed%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="assets/manrope-regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261013-2">
+  <link rel="stylesheet" href="styles.css?v=20261026-1">
 </head>
 
 <body id="top">
@@ -228,8 +228,8 @@
         <a href="#firewall-simulator"><span>02</span> Firewall</a>
         <a href="#secure-mail"><span>03</span> Cryptography</a>
         <a href="#smart-bin"><span>04</span> Cloud &amp; IoT</a>
-        <a href="#owasp-juice-shop"><span>05</span> Web security</a>
-        <a href="#bank-lab"><span>06</span> Bank lab</a>
+        <a href="#bank-lab"><span>05</span> Bank lab</a>
+        <a href="#owasp-juice-shop"><span>06</span> Web security</a>
         <a href="#digital-forensics"><span>07</span> Forensics</a>
         <a href="#library-system"><span>08</span> Library</a>
         <a href="#grade-calculator"><span>09</span> Grades</a>
@@ -595,11 +595,131 @@
         </figure>
       </article>
 
-      <!-- 05: OWASP JUICE SHOP -->
+      <!-- 05: BANK LAB -->
+
+      <article class="project" id="bank-lab" tabindex="-1">
+        <div class="project-meta">
+          <span class="project-number">05</span>
+          <span>Secure programming coursework / 2026</span>
+        </div>
+
+        <div class="project-body">
+          <h3>Secure Bank<br>Vulnerability Testing and Remediation</h3>
+          <p>
+            I built vulnerable and secured versions of Mellow’s Bank using
+            Flask and SQLite. I tested its customer and admin workflows,
+            documented the weaknesses, then implemented fixes and repeated
+            the tests. Both versions are available on GitHub so the original
+            behaviour and the changes can be compared.
+          </p>
+
+          <ul class="tags" aria-label="Technologies and tools">
+            <li>Python</li>
+            <li>Flask</li>
+            <li>SQLite</li>
+            <li>Burp Suite</li>
+            <li>Wireshark</li>
+            <li>HTTPS/TLS</li>
+          </ul>
+
+          <div class="project-links">
+            <a class="repo-link" href="https://github.com/Melloww-png/local-bank-cw2/tree/main/Ver.Secured-Bank" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <use href="#icon-github"></use>
+              </svg>
+              Secured source code
+            </a>
+
+            <a class="repo-link" href="https://github.com/Melloww-png/local-bank-cw2/tree/main/vulnerable" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <use href="#icon-github"></use>
+              </svg>
+              Vulnerable source code
+            </a>
+          </div>
+
+          <details>
+            <summary>What I tested and fixed</summary>
+            <div class="detail-content">
+              <ul>
+                <li><strong>Database queries:</strong> tested SQL injection in customer search and used parameterised queries in the secured version.</li>
+                <li><strong>Access control:</strong> restricted debt changes to administrators and checked giveaway eligibility against the database.</li>
+                <li><strong>Input validation:</strong> rejected negative transfers and unexpected profile fields, including attempts to change a credit score.</li>
+                <li><strong>Stored XSS:</strong> escaped support messages in the admin inbox and added a Content Security Policy.</li>
+                <li><strong>Data protection:</strong> reduced customer information returned by search and added HTTPS/TLS for local testing.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>Testing evidence and project scope</summary>
+            <div class="detail-content">
+              <p>
+                I used browser developer tools and Burp Suite to examine and
+                modify requests, then retested the fixes. Wireshark was used
+                to compare readable HTTP traffic with encrypted HTTPS traffic.
+                The screenshots below show a negative-transfer test in the
+                vulnerable version and an HTTP 400 response from the secured
+                version. This is a completed local coursework lab using
+                fictional accounts and balances; it is not a live banking service.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div class="project-proof">
+          <span class="eyebrow">Secured version result</span>
+          <strong class="big-number">400</strong>
+          <span class="proof-label">HTTP response rejecting a negative transfer</span>
+          <div class="proof-divider"></div>
+          <span class="proof-note">
+            Amount tested: −100<br>
+            Burp Suite retest · Local coursework lab
+          </span>
+        </div>
+
+        <div class="bank-gallery" role="group" aria-label="Bank testing evidence">
+          <figure class="project-screenshot">
+            <a href="Pictures%20for%20the%20website/Bank%20Vuln.png" target="_blank" rel="noopener noreferrer" aria-label="Open the vulnerable bank test screenshot full size">
+              <img
+                src="Pictures%20for%20the%20website/Bank%20Vuln.png"
+                alt="Vulnerable bank dashboard beside a browser console submitting a transfer amount of minus 100."
+                width="1379"
+                height="627"
+                loading="lazy"
+                decoding="async"
+              >
+            </a>
+            <figcaption>
+              <strong>Vulnerable version:</strong> a negative-transfer test
+              using a fictional account. Select the image to view it full size.
+            </figcaption>
+          </figure>
+
+          <figure class="project-screenshot">
+            <a href="Pictures%20for%20the%20website/Bank%20Secured.png" target="_blank" rel="noopener noreferrer" aria-label="Open the secured bank retest screenshot full size">
+              <img
+                src="Pictures%20for%20the%20website/Bank%20Secured.png"
+                alt="Burp Suite showing HTTP 400 Bad Request when the secured bank receives a transfer amount of minus 100 over HTTPS."
+                width="1379"
+                height="727"
+                loading="lazy"
+                decoding="async"
+              >
+            </a>
+            <figcaption>
+              <strong>Secured version:</strong> Burp Suite shows HTTP 400
+              when the transfer amount is −100. Select the image to view it full size.
+            </figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- 06: OWASP JUICE SHOP -->
 
       <article class="project" id="owasp-juice-shop" tabindex="-1">
         <div class="project-meta">
-          <span class="project-number">05</span>
+          <span class="project-number">06</span>
           <span>Web application security / 2026</span>
         </div>
 
@@ -672,61 +792,6 @@
             Select the image to view it full size.
           </figcaption>
         </figure>
-      </article>
-
-      <!-- 06: BANK LAB -->
-
-      <article class="project" id="bank-lab" tabindex="-1">
-        <div class="project-meta">
-          <span class="project-number">06</span>
-          <span>Secure programming coursework / 2026</span>
-        </div>
-
-        <div class="project-body">
-          <h3>Bank Website Security Lab</h3>
-          <p>
-            A local banking demo built with Flask and SQLite for secure-programming
-            coursework. It has customer accounts, transfers, borrowing, support
-            and admin pages. I use fictional accounts and balances to explore how
-            common web security weaknesses affect these workflows.
-          </p>
-
-          <ul class="tags" aria-label="Technologies and techniques">
-            <li>Python</li>
-            <li>Flask</li>
-            <li>SQLite</li>
-            <li>Web security</li>
-            <li>Local lab</li>
-          </ul>
-
-          <div class="project-links">
-            <a class="repo-link" href="https://github.com/Melloww-png/local-bank-cw2" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <use href="#icon-github"></use>
-              </svg>
-              View repository
-            </a>
-          </div>
-
-          <details>
-            <summary>What I built</summary>
-            <div class="detail-content">
-              <ul>
-                <li><strong>Banking workflows:</strong> customer registration and login, account search, transfers, borrowing, profiles and support messages.</li>
-                <li><strong>Admin workflows:</strong> customer management, debt handling and giveaway selection.</li>
-                <li><strong>Learning goal:</strong> demonstrate security weaknesses, document their impact and work towards a separate fixed version. The coursework is still in progress.</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <div class="project-proof">
-          <span class="eyebrow">Coursework lab</span>
-          <p class="proof-heading">Banking workflows<br>in a local lab.</p>
-          <span class="proof-note">
-            Fictional accounts and balances · Coursework in progress
-          </span>
-        </div>
       </article>
 
       <!-- 07: DIGITAL FORENSICS -->
@@ -1183,17 +1248,20 @@
                 Secure programming, cryptography and computer forensics.
               </p>
             </li>
+
             <li>
               <span class="eyebrow">Apr 2025 – Dec 2025</span>
               <h4>Diploma in Cybersecurity</h4>
               <p>PSB Academy · Singapore</p>
               <p class="small">Network defence and computer systems.</p>
             </li>
+
             <li>
               <span class="eyebrow">Sep 2024 – Mar 2025</span>
               <h4>Certificate in Engineering<br>and Information Technology</h4>
               <p>PSB Academy · Singapore</p>
             </li>
+
             <li>
               <span class="eyebrow">Currently studying</span>
               <h4>TryHackMe SAL1</h4>
@@ -1217,6 +1285,7 @@
                 problems and communicating with suppliers.
               </p>
             </li>
+
             <li>
               <span class="eyebrow">Aug 2023 – Apr 2024 · Jakarta, Indonesia</span>
               <h4>Student Council Leader</h4>
@@ -1368,13 +1437,25 @@
           target && target !== view && target.closest('[data-view]');
 
         if (projectTarget) {
-          if (moveFocus) target.focus({ preventScroll: true });
-          target.scrollIntoView({ block: 'start', behavior: 'instant' });
+          if (moveFocus) {
+            target.focus({ preventScroll: true });
+          }
+
+          target.scrollIntoView({
+            block: 'start',
+            behavior: 'instant'
+          });
         } else {
           if (moveFocus) {
-            view.querySelector('.view-title').focus({ preventScroll: true });
+            view.querySelector('.view-title').focus({
+              preventScroll: true
+            });
           }
-          window.scrollTo({ top: 0, behavior: 'instant' });
+
+          window.scrollTo({
+            top: 0,
+            behavior: 'instant'
+          });
         }
       }
 
@@ -1401,13 +1482,28 @@
 
         if (hash === '#main') {
           event.preventDefault();
-          main.focus({ preventScroll: true });
-          window.scrollTo({ top: 0, behavior: 'instant' });
+
+          main.focus({
+            preventScroll: true
+          });
+
+          window.scrollTo({
+            top: 0,
+            behavior: 'instant'
+          });
         } else if (hash === '#top') {
           event.preventDefault();
+
           const view = views.find(section => !section.hidden);
-          view.querySelector('.view-title').focus({ preventScroll: true });
-          window.scrollTo({ top: 0, behavior: 'instant' });
+
+          view.querySelector('.view-title').focus({
+            preventScroll: true
+          });
+
+          window.scrollTo({
+            top: 0,
+            behavior: 'instant'
+          });
         } else if (hash === window.location.hash) {
           event.preventDefault();
           showView(true);
