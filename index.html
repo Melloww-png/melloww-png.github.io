@@ -99,7 +99,7 @@
 
           <!-- RESUME BUTTONS -->
 
-          <div class="actions" role="group" aria-label="Résumé">
+          <div class="actions" role="group" aria-label="Resume">
             <a
               class="button"
               href="assets/Daniel-Clementrich-Houston-Resume.pdf"
@@ -110,18 +110,7 @@
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
                 <path d="M14 2v6h6M8 13h8M8 17h6"></path>
               </svg>
-              View résumé
-            </a>
-
-            <a
-              class="button"
-              href="assets/Daniel-Clementrich-Houston-Resume.pdf"
-              download="Daniel-Clementrich-Houston-Resume.pdf"
-            >
-              <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"></path>
-              </svg>
-              Download résumé
+              View Resume
             </a>
           </div>
 
@@ -629,7 +618,6 @@
               </svg>
               Secured source code
             </a>
-
             <a class="repo-link" href="https://github.com/Melloww-png/local-bank-cw2/tree/main/vulnerable" target="_blank" rel="noopener noreferrer">
               <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <use href="#icon-github"></use>
@@ -1250,20 +1238,17 @@
                 Secure programming, cryptography and computer forensics.
               </p>
             </li>
-
             <li>
               <span class="eyebrow">Apr 2025 – Dec 2025</span>
               <h4>Diploma in Cybersecurity</h4>
               <p>PSB Academy · Singapore</p>
               <p class="small">Network defence and computer systems.</p>
             </li>
-
             <li>
               <span class="eyebrow">Sep 2024 – Mar 2025</span>
               <h4>Certificate in Engineering<br>and Information Technology</h4>
               <p>PSB Academy · Singapore</p>
             </li>
-
             <li>
               <span class="eyebrow">Currently studying</span>
               <h4>TryHackMe SAL1</h4>
@@ -1287,7 +1272,6 @@
                 problems and communicating with suppliers.
               </p>
             </li>
-
             <li>
               <span class="eyebrow">Aug 2023 – Apr 2024 · Jakarta, Indonesia</span>
               <h4>Student Council Leader</h4>
@@ -1364,7 +1348,7 @@
 
       <!-- RESUME BUTTONS -->
 
-      <div class="actions" role="group" aria-label="Résumé">
+      <div class="actions" role="group" aria-label="Resume">
         <a
           class="button"
           href="assets/Daniel-Clementrich-Houston-Resume.pdf"
@@ -1375,18 +1359,7 @@
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path>
             <path d="M14 2v6h6M8 13h8M8 17h6"></path>
           </svg>
-          View résumé
-        </a>
-
-        <a
-          class="button"
-          href="assets/Daniel-Clementrich-Houston-Resume.pdf"
-          download="Daniel-Clementrich-Houston-Resume.pdf"
-        >
-          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-            <path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"></path>
-          </svg>
-          Download résumé
+          View Resume
         </a>
       </div>
     </section>
@@ -1439,25 +1412,13 @@
           target && target !== view && target.closest('[data-view]');
 
         if (projectTarget) {
-          if (moveFocus) {
-            target.focus({ preventScroll: true });
-          }
-
-          target.scrollIntoView({
-            block: 'start',
-            behavior: 'instant'
-          });
+          if (moveFocus) target.focus({ preventScroll: true });
+          target.scrollIntoView({ block: 'start', behavior: 'instant' });
         } else {
           if (moveFocus) {
-            view.querySelector('.view-title').focus({
-              preventScroll: true
-            });
+            view.querySelector('.view-title').focus({ preventScroll: true });
           }
-
-          window.scrollTo({
-            top: 0,
-            behavior: 'instant'
-          });
+          window.scrollTo({ top: 0, behavior: 'instant' });
         }
       }
 
@@ -1484,28 +1445,13 @@
 
         if (hash === '#main') {
           event.preventDefault();
-
-          main.focus({
-            preventScroll: true
-          });
-
-          window.scrollTo({
-            top: 0,
-            behavior: 'instant'
-          });
+          main.focus({ preventScroll: true });
+          window.scrollTo({ top: 0, behavior: 'instant' });
         } else if (hash === '#top') {
           event.preventDefault();
-
           const view = views.find(section => !section.hidden);
-
-          view.querySelector('.view-title').focus({
-            preventScroll: true
-          });
-
-          window.scrollTo({
-            top: 0,
-            behavior: 'instant'
-          });
+          view.querySelector('.view-title').focus({ preventScroll: true });
+          window.scrollTo({ top: 0, behavior: 'instant' });
         } else if (hash === window.location.hash) {
           event.preventDefault();
           showView(true);
