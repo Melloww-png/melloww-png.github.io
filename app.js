@@ -1,5 +1,4 @@
 "use strict";
-// Reuse the images already stored in this repository.
 (() => {
   const imageFiles = {
     "assets/siem.png": "soc-siem-dashboard.png",
@@ -29,7 +28,6 @@
     });
   });
 
-  // Fix the screenshot already present on the homepage.
   document.querySelectorAll("img[src]").forEach(image => {
     const currentPath = image.getAttribute("src");
     const correctedPath = correctImagePath(currentPath);
