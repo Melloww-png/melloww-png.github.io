@@ -1,4 +1,44 @@
 "use strict";
+// Reuse the images already stored in this repository.
+(() => {
+  const imageFiles = {
+    "assets/siem.png": "soc-siem-dashboard.png",
+    "assets/bank-secured.png": "Bank Secured.png",
+    "assets/bank-vulnerable.png": "Bank Vuln.png",
+    "assets/firewall.png": "Firewall Simulator.png",
+    "assets/forensics.png": "Forensics.png",
+    "assets/iot.png": "IoT Azure picture.png",
+    "assets/cryptography.png": "Cryptography .png",
+    "assets/juice-shop.png": "OWASP JUICE SHOP.png",
+    "assets/library.png": "SOLA Algo&Data Structure.png"
+  };
+
+  function correctImagePath(path) {
+    const filename = imageFiles[path];
+
+    return filename
+      ? "Pictures%20for%20the%20website/" +
+        encodeURIComponent(filename)
+      : path;
+  }
+
+  // Fix images used by project cards, evidence tabs and the viewer.
+  (window.PORTFOLIO_PROJECTS || []).forEach(project => {
+    (project.images || []).forEach(image => {
+      image.src = correctImagePath(image.src);
+    });
+  });
+
+  // Fix the screenshot already present on the homepage.
+  document.querySelectorAll("img[src]").forEach(image => {
+    const currentPath = image.getAttribute("src");
+    const correctedPath = correctImagePath(currentPath);
+
+    if (correctedPath !== currentPath) {
+      image.src = correctedPath;
+    }
+  });
+})();
 
 (() => {
   const projects = window.PORTFOLIO_PROJECTS;
